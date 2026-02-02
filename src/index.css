@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  /* Backgrounds */
+  --color-cyber-dark: #0b0e13;
+  --color-cyber-darker: #11151b;
+  --color-cyber-card: #161b22;
+
+  /* Accent Colors */
+  --color-accent-red: #EE4126;
+  --color-accent-red-hover: #d63920;
+  --color-accent-light: #f5f5f5;
+  --color-accent-silver: #c0c0c0;
+
+  /* Text Colors */
+  --color-text-primary: #e6e6e6;
+  --color-text-muted: #8a8a8a;
+
+  /* Supporting Colors */
+  --color-success: #00ff88;
+  --color-warning: #ffaa00;
+  --color-border: #2a2f38;
+
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cyber-dark);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cyber-darker);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* Glow effects */
+.glow-red {
+  box-shadow: 0 0 20px rgba(238, 65, 38, 0.3);
+}
+
+/* Animated background grid */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(238, 65, 38, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(238, 65, 38, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Text gradient */
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff, var(--color-accent-red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

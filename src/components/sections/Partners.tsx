@@ -1,8 +1,9 @@
 import { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import checkPointLogo from '../../assets/Check-Point-2024-logo-reversed.png';
 
 const partners = [
-  { name: 'Partner 1', logo: 'https://via.placeholder.com/200x80/161b22/8a8a8a?text=Partner+1' },
+  { name: 'Check Point', logo: checkPointLogo },
   { name: 'Partner 2', logo: 'https://via.placeholder.com/200x80/161b22/8a8a8a?text=Partner+2' },
   { name: 'Partner 3', logo: 'https://via.placeholder.com/200x80/161b22/8a8a8a?text=Partner+3' },
   { name: 'Partner 4', logo: 'https://via.placeholder.com/200x80/161b22/8a8a8a?text=Partner+4' },
@@ -112,11 +113,11 @@ export default function Partners() {
                   key={`${partner.name}-${idx}`}
                   className="flex-shrink-0 w-1/3 px-2 md:px-4"
                 >
-                  <div className="flex items-center justify-center p-4 md:p-6 h-20 md:h-24 bg-cyber-card border border-border rounded-xl grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300">
+                  <div className="flex items-center justify-center p-4 md:p-6 h-24 md:h-28 bg-cyber-card border border-border rounded-xl transition-all duration-300">
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="max-h-8 md:max-h-10 w-auto"
+                      className="max-h-16 md:max-h-20 w-auto"
                     />
                   </div>
                 </div>

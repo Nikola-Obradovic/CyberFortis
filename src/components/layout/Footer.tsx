@@ -143,7 +143,7 @@ export default function Footer() {
               <li>
                 <span className="text-text-muted text-sm flex items-start gap-2">
                   <MapPin size={16} className="flex-shrink-0 mt-0.5" />
-                  Zagreb, Hrvatska
+                  Trnjanska cesta 59, 10000 Zagreb, Hrvatska
                 </span>
               </li>
             </ul>

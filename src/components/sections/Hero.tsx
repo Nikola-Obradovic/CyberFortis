@@ -79,17 +79,23 @@ export default function Hero() {
           <span className="text-sm text-white font-medium">Pouzdana zaštita za vaše poslovanje</span>
         </div>
 
-        {/* Main Headline */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-          Zaštitite svoje{' '}
-          <span className="text-gradient">digitalne resurse</span>
-        </h1>
+        {/* Main Headline + Subheadline with red cubes background */}
+        <div className="relative py-8">
+          <div
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-screen h-full bg-repeat bg-center pointer-events-none"
+            style={{ backgroundImage: `url(${redCubes})`, backgroundSize: '300px auto' }}
+          />
+          <h1 className="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            Zaštitite svoje digitalne resurse
+          </h1>
 
-        {/* Subheadline */}
-        <p className="text-lg sm:text-xl text-text-muted max-w-3xl mx-auto mb-10">
-          Proaktivna kibernetička sigurnost za moderne prijetnje. Naš tim stručnjaka
-          štiti vaše poslovanje s najnovijim tehnologijama i metodologijama.
-        </p>
+          <p className="relative text-lg sm:text-xl text-white max-w-3xl mx-auto">
+            Proaktivna kibernetička sigurnost za moderne prijetnje. Naš tim stručnjaka
+            štiti vaše poslovanje s najnovijim tehnologijama i metodologijama.
+          </p>
+        </div>
+
+        <div className="h-10" />
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

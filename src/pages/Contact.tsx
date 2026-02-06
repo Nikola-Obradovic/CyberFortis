@@ -1,30 +1,7 @@
-import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Clock } from 'lucide-react';
-import Button from '../components/ui/Button';
+import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import contactIllustration from '../assets/contact-illustration.svg';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log(formData);
-    alert('Hvala na upitu! Javit ćemo vam se u najkraćem mogućem roku.');
-  };
-
   return (
     <div className="pt-20">
       {/* Hero Section */}
@@ -114,139 +91,13 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="lg:col-span-2">
-              <div className="bg-cyber-card border border-border rounded-2xl p-8">
-                <h2 className="text-2xl font-bold text-white mb-6">
-                  Pošaljite upit
-                </h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label
-                        htmlFor="name"
-                        className="block text-sm font-medium text-text-primary mb-2"
-                      >
-                        Ime i prezime *
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        value={formData.name}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 bg-cyber-dark border border-border rounded-lg text-text-primary focus:outline-none focus:border-accent-red transition-colors"
-                        placeholder="Vaše ime"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-sm font-medium text-text-primary mb-2"
-                      >
-                        Email *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 bg-cyber-dark border border-border rounded-lg text-text-primary focus:outline-none focus:border-accent-red transition-colors"
-                        placeholder="vas@email.hr"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label
-                        htmlFor="company"
-                        className="block text-sm font-medium text-text-primary mb-2"
-                      >
-                        Tvrtka
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 bg-cyber-dark border border-border rounded-lg text-text-primary focus:outline-none focus:border-accent-red transition-colors"
-                        placeholder="Naziv tvrtke"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="phone"
-                        className="block text-sm font-medium text-text-primary mb-2"
-                      >
-                        Telefon
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 bg-cyber-dark border border-border rounded-lg text-text-primary focus:outline-none focus:border-accent-red transition-colors"
-                        placeholder="+385 ..."
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="service"
-                      className="block text-sm font-medium text-text-primary mb-2"
-                    >
-                      Usluga koja vas zanima
-                    </label>
-                    <select
-                      id="service"
-                      name="service"
-                      value={formData.service}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-cyber-dark border border-border rounded-lg text-text-primary focus:outline-none focus:border-accent-red transition-colors"
-                    >
-                      <option value="">Odaberite uslugu</option>
-                      <option value="procjena">Sigurnosna procjena</option>
-                      <option value="pentest">Penetracijsko testiranje</option>
-                      <option value="soc">SOC usluge</option>
-                      <option value="incident">Odgovor na incidente</option>
-                      <option value="uskladjenost">Usklađenost i rizici</option>
-                      <option value="edukacija">Edukacija zaposlenika</option>
-                      <option value="ostalo">Ostalo</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-text-primary mb-2"
-                    >
-                      Poruka *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      required
-                      rows={5}
-                      value={formData.message}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-cyber-dark border border-border rounded-lg text-text-primary focus:outline-none focus:border-accent-red transition-colors resize-none"
-                      placeholder="Opišite vaše potrebe ili postavite pitanje..."
-                    />
-                  </div>
-
-                  <Button type="submit" className="w-full md:w-auto">
-                    <Send className="w-4 h-4 mr-2" />
-                    Pošalji upit
-                  </Button>
-                </form>
-              </div>
+            {/* Illustration */}
+            <div className="lg:col-span-2 flex items-center justify-center">
+              <img
+                src={contactIllustration}
+                alt="Defensive cybersecurity shield illustration"
+                className="w-full max-w-lg"
+              />
             </div>
           </div>
         </div>

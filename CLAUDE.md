@@ -24,7 +24,7 @@ Primary colors extracted from cyberfortis.hr:
 --bg-card: #161b22;         /* Card/component backgrounds */
 
 /* Accent Colors */
---accent-primary: #FF0000;   /* Bright red - CTAs, important highlights */
+--accent-primary: #ed1c24;   /* Bright red - CTAs, important highlights */
 --accent-secondary: #00E0FF; /* Cyan/turquoise - cyber glow effects, secondary accents */
 --accent-glow: rgba(0, 224, 255, 0.3); /* Cyan glow for subtle effects */
 
@@ -51,7 +51,7 @@ colors: {
     card: '#161b22',
   },
   accent: {
-    red: '#FF0000',
+    red: '#ed1c24',
     cyan: '#00E0FF',
   },
   text: {

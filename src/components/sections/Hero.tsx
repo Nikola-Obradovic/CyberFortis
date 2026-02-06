@@ -71,9 +71,12 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-cyber-card border border-border rounded-full px-4 py-2 mb-8">
-          <Shield className="w-4 h-4 text-accent-red" />
-          <span className="text-sm text-text-muted">Pouzdana zaštita za vaše poslovanje</span>
+        <div
+          className="inline-flex items-center gap-2 border border-border rounded-full px-4 py-2 mb-8 bg-repeat bg-center"
+          style={{ backgroundImage: `url(${redCubes})`, backgroundSize: '150px auto' }}
+        >
+          <Shield className="w-4 h-4 text-white" />
+          <span className="text-sm text-white font-medium">Pouzdana zaštita za vaše poslovanje</span>
         </div>
 
         {/* Main Headline */}
@@ -103,7 +106,6 @@ export default function Hero() {
       {/* Stats */}
       <div
         className="relative z-10 w-full mt-20"
-        style={{ backgroundImage: `url(${redCubes})`, backgroundRepeat: 'repeat', backgroundSize: '600px auto' }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center gap-x-16 gap-y-8 py-8">
           <div ref={stat1.ref}>

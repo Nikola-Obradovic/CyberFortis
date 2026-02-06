@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Shield } from 'lucide-react';
 import Button from '../ui/Button';
+import redCubes from '../../assets/red_cubes.png';
 
 function useCountUp(end: number, duration: number = 2000, startOnView: boolean = true) {
   const [count, setCount] = useState(0);
@@ -62,7 +63,7 @@ export default function Hero() {
   const stat3 = useCountUp(15, 1500);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-grid overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center bg-grid overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-cyber-dark via-cyber-dark to-cyber-darker" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-red/5 rounded-full blur-3xl" />
@@ -97,8 +98,14 @@ export default function Hero() {
           </Button>
         </div>
 
-        {/* Stats */}
-        <div className="mt-20 flex flex-wrap justify-center gap-x-16 gap-y-8">
+      </div>
+
+      {/* Stats */}
+      <div
+        className="relative z-10 w-full mt-20"
+        style={{ backgroundImage: `url(${redCubes})`, backgroundRepeat: 'repeat', backgroundSize: '600px auto' }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center gap-x-16 gap-y-8 py-8">
           <div ref={stat1.ref}>
             <div className="text-4xl md:text-5xl font-bold text-white mb-1">{stat1.count}+</div>
             <div className="text-text-muted">Zaštićenih tvrtki</div>

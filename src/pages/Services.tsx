@@ -3,22 +3,27 @@ import {
   Search,
   Monitor,
   AlertTriangle,
-  FileCheck,
-  Users,
-  Lock,
-  Cloud,
+  Database,
+  Key,
+  Bug,
+  Laptop,
+  Network,
   ArrowRight,
 } from 'lucide-react';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Button from '../components/ui/Button';
 import CTA from '../components/sections/CTA';
+import databaseProtectionImg from '../assets/database-protection.svg';
+import pamIllustrationImg from '../assets/pam-illustration.svg';
 
 const services = [
   {
     id: 'procjene',
     icon: Search,
-    title: 'Sigurnosne procjene i auditi',
+    title: 'Sigurnosne procjene',
     description:
-      'Temeljita analiza vaše IT infrastrukture, politika i procedura za identifikaciju sigurnosnih propusta.',
+      'Temeljita analiza vaše IT infrastrukture za identifikaciju ranjivosti i sigurnosnih propusta prije nego ih napadači iskoriste.',
     features: [
       'Analiza mrežne infrastrukture',
       'Pregled sigurnosnih politika',
@@ -33,7 +38,7 @@ const services = [
     icon: Shield,
     title: 'Penetracijsko testiranje',
     description:
-      'Simulirani napadi na vaše sustave kako bismo otkrili ranjivosti prije pravih napadača.',
+      'Simulirani napadi na vaše sustave kako bismo otkrili slabosti i testirali vašu obranu u kontroliranim uvjetima.',
     features: [
       'Web aplikacijsko testiranje',
       'Testiranje mrežne infrastrukture',
@@ -46,9 +51,9 @@ const services = [
   {
     id: 'soc',
     icon: Monitor,
-    title: 'Security Operations Center (SOC)',
+    title: 'SOC usluge',
     description:
-      'Neprekidni nadzor vaših sustava. Detektiramo i reagiramo na prijetnje u realnom vremenu.',
+      'Neprekidni nadzor vaše mreže i sustava. Naš Security Operations Center detektira i reagira na prijetnje u realnom vremenu.',
     features: [
       'Kontinuirani nadzor sigurnosnih događaja',
       'SIEM implementacija i upravljanje',
@@ -59,11 +64,86 @@ const services = [
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
   },
   {
+    id: 'baze-podataka',
+    icon: Database,
+    title: 'Zaštita baza podataka',
+    description:
+      'Kompletan monitoring, blokiranje i zaštita strukturiranih podataka u vašim bazama podataka, brže vrijeme rješavanja revizije i compliance-a (NIS2, DORA).',
+    features: [
+      'Monitoring baza podataka u realnom vremenu',
+      'Blokiranje neovlaštenog pristupa',
+      'Zaštita strukturiranih podataka',
+      'Ubrzana revizija i compliance',
+      'Podrška za NIS2 i DORA regulativu',
+    ],
+    image: databaseProtectionImg,
+  },
+  {
+    id: 'pam',
+    icon: Key,
+    title: 'Upravljanje privilegiranim pristupom (PAM)',
+    description:
+      'Zaštita administratorskih rola, upravljanje zaporkama i kompletan monitoring.',
+    features: [
+      'Zaštita privilegiranih računa',
+      'Centralizirano upravljanje zaporkama',
+      'Sesijski nadzor i snimanje',
+      'Just-in-time pristup',
+      'Detaljni revizijski tragovi',
+    ],
+    image: pamIllustrationImg,
+  },
+  {
+    id: 'ranjivosti',
+    icon: Bug,
+    title: 'Upravljanje ranjivostima',
+    description:
+      'Rješenje za upravljanje ranjivostima i proaktivno patchiranje kritičnih sistema.',
+    features: [
+      'Kontinuirano skeniranje ranjivosti',
+      'Prioritizacija prema riziku',
+      'Proaktivno patchiranje',
+      'Integracija s ITSM alatima',
+      'Izvještavanje i praćenje napretka',
+    ],
+    image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&h=400&fit=crop',
+  },
+  {
+    id: 'edr',
+    icon: Laptop,
+    title: 'Zaštita endpointa (EDR)',
+    description:
+      'Kompletno rješenje za upravljanje serverima i radnim stanicama. Proaktivna odbrana protiv kibernetičkih prijetnji.',
+    features: [
+      'Real-time detekcija prijetnji',
+      'Automatska izolacija zaraženih uređaja',
+      'Forenzička analiza',
+      'Centralizirano upravljanje',
+      'Integracija s SIEM sustavima',
+    ],
+    image: 'https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?w=600&h=400&fit=crop',
+  },
+  {
+    id: 'mrezna-zastita',
+    icon: Network,
+    title: 'Mrežna zaštita',
+    description:
+      'U suradnji s vodećim vendorima za zaštitu mrežne infrastrukture, možemo vam ponuditi najbolja rješenja.',
+    features: [
+      'Next-gen firewall rješenja',
+      'Segmentacija mreže',
+      'IDS/IPS implementacija',
+      'Zaštita od DDoS napada',
+      'VPN i siguran udaljeni pristup',
+    ],
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop',
+  },
+  {
     id: 'incident',
     icon: AlertTriangle,
     title: 'Odgovor na incidente',
     description:
-      'Brza i učinkovita reakcija kada se dogodi sigurnosni incident. Minimiziramo štetu i ubrzavamo oporavak.',
+      'Brza i učinkovita reakcija na sigurnosne incidente. Minimiziramo štetu i pomažemo u oporavku vaših sustava.',
     features: [
       'Hitna reakcija na incidente',
       'Forenzička analiza',
@@ -73,69 +153,23 @@ const services = [
     ],
     image: 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&h=400&fit=crop',
   },
-  {
-    id: 'uskladjenost',
-    icon: FileCheck,
-    title: 'Usklađenost i upravljanje rizicima',
-    description:
-      'Pomoć pri usklađivanju s regulativama i standardima te procjena i upravljanje sigurnosnim rizicima.',
-    features: [
-      'GDPR usklađenost',
-      'NIS2 direktivna priprema',
-      'ISO 27001 certifikacija',
-      'Procjena rizika',
-      'Izrada sigurnosnih politika',
-    ],
-    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop',
-  },
-  {
-    id: 'edukacija',
-    icon: Users,
-    title: 'Edukacija i podizanje svijesti',
-    description:
-      'Programi obuke koji vaše zaposlenike pretvaraju u prvu liniju obrane protiv kibernetičkih prijetnji.',
-    features: [
-      'Simulacije phishing napada',
-      'Interaktivne radionice',
-      'E-learning platforme',
-      'Testiranje znanja',
-      'Prilagođeni programi po industriji',
-    ],
-    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=400&fit=crop',
-  },
-  {
-    id: 'cloud',
-    icon: Cloud,
-    title: 'Cloud sigurnost',
-    description:
-      'Zaštita vaših resursa u oblaku. Osiguravamo sigurnu migraciju i kontinuiranu zaštitu cloud okruženja.',
-    features: [
-      'Procjena cloud sigurnosti',
-      'Konfiguracija sigurnosnih postavki',
-      'Identity and Access Management',
-      'Nadzor cloud okruženja',
-      'Zaštita podataka',
-    ],
-    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&h=400&fit=crop',
-  },
-  {
-    id: 'kripto',
-    icon: Lock,
-    title: 'Kriptografske usluge',
-    description:
-      'Implementacija i upravljanje kriptografskim rješenjima za zaštitu osjetljivih podataka.',
-    features: [
-      'PKI implementacija',
-      'Upravljanje certifikatima',
-      'Enkripcija podataka',
-      'Sigurna komunikacija',
-      'Key management',
-    ],
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop',
-  },
 ];
 
 export default function ServicesPage() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, [location.hash]);
+
   return (
     <div className="pt-20">
       {/* Hero Section */}

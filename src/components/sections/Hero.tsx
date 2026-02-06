@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Shield } from 'lucide-react';
 import Button from '../ui/Button';
-import redCubes from '../../assets/red_cubes.png';
+import redCubes from '../../assets/red_cubes.webp';
 
 function useCountUp(end: number, duration: number = 2000, startOnView: boolean = true) {
   const [count, setCount] = useState(0);

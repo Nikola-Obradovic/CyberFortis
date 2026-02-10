@@ -83,24 +83,17 @@ export default function About() {
             <div>
               <p className="text-accent-red font-medium mb-3">Naša priča</p>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Od vizije do vodećeg pružatelja sigurnosti
+                Cyberfortis – Hrvatski startup koji spaja domaće iskustvo iz industrije sa cyber security projektima u regiji
               </h2>
               <div className="space-y-4 text-text-muted leading-relaxed">
                 <p>
-                  CyberFortis je osnovan 2010. godine od strane grupe stručnjaka koji
-                  su prepoznali rastuću potrebu za profesionalnim sigurnosnim
-                  uslugama na hrvatskom tržištu.
+                Naš tim je podijeljen na defensive (plavi tim) i offensive (crveni tim) cyber security stručnjake, čime pokrivamo cijeli spektar zaštite - od prevencije i detekcije do simulacije napada.
                 </p>
                 <p>
-                  Kroz godine, izgradili smo tim od preko 50 certificiranih
-                  stručnjaka i postali pouzdani partner stotinama tvrtki - od malih
-                  poduzeća do velikih korporacija i državnih institucija.
+               Naši inženjeri radili su na najsloženijim sigurnosnim projektima u regiji, surađujući s vodećim bankama, energetskim kompanijama i institucijama u sektoru zdravstva. Posjedujemo najprestižnije certifikate iz svijeta cyber sigurnosti te bogato iskustvo u radu s vodećim vendorima kao što su IBM, Check Point, Qualys i CrowdStrike.
                 </p>
                 <p>
-                  Naš pristup kombinira najnovije tehnologije s dubokim razumijevanjem
-                  lokalnog tržišta i regulatornog okruženja, pružajući rješenja koja
-                  su istovremeno svjetske klase i prilagođena specifičnim potrebama
-                  naših klijenata.
+                Naša vizija je stvaranje novog, lokalnog tima cyber security specijalista koji će kroz znanje, iskustvo i predanost graditi sigurniju digitalnu budućnost regije.
                 </p>
               </div>
             </div>
@@ -148,7 +141,7 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 lg:py-32 bg-cyber-darker">
+      <section className="py-20 lg:py-32 bg-cyber-darker hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-accent-red font-medium mb-3">Naš tim</p>

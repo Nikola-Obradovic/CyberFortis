@@ -70,21 +70,19 @@ export default function Hero() {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/3 rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
-        {/* Badge */}
-        <div
-          className="inline-flex items-center gap-2 border border-border rounded-full px-4 py-2 mb-8 bg-repeat bg-center"
-          style={{ backgroundImage: `url(${redCubes})`, backgroundSize: '150px auto' }}
-        >
-          <Shield className="w-4 h-4 text-white" />
-          <span className="text-sm text-white font-medium">Pouzdana zaštita za vaše poslovanje</span>
-        </div>
-
-        {/* Main Headline + Subheadline with red cubes background */}
+        {/* Badge + Headline + CTAs with red cubes background */}
         <div className="relative py-8">
           <div
             className="absolute top-0 left-1/2 -translate-x-1/2 w-screen h-full bg-repeat bg-center pointer-events-none"
             style={{ backgroundImage: `url(${redCubes})`, backgroundSize: '300px auto' }}
           />
+
+          {/* Badge */}
+          <div className="relative inline-flex items-center gap-2 border border-white/30 rounded-full px-4 py-2 mb-8">
+            <Shield className="w-4 h-4 text-white" />
+            <span className="text-sm text-white font-medium">Pouzdana zaštita za vaše poslovanje</span>
+          </div>
+
           <h1 className="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             Zaštitite svoje digitalne resurse
           </h1>
@@ -93,18 +91,18 @@ export default function Hero() {
             Proaktivna kibernetička sigurnost za moderne prijetnje. Naš tim stručnjaka
             štiti vaše poslovanje s najnovijim tehnologijama i metodologijama.
           </p>
-        </div>
 
-        <div className="h-10" />
+          <div className="h-10" />
 
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button href="/kontakt" size="lg" scrollToForm>
-            Besplatna procjena sigurnosti
-          </Button>
-          <Button href="/usluge" variant="outline" size="lg">
-            Saznajte više
-          </Button>
+          {/* CTAs */}
+          <div className="relative flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button href="/kontakt" size="lg" scrollToForm className="!bg-black !text-white hover:!bg-black/80 !border-0">
+              Besplatna procjena sigurnosti
+            </Button>
+            <Button href="/usluge" variant="outline" size="lg" className="!bg-black !text-white !border-black hover:!bg-black/80">
+              Saznajte više
+            </Button>
+          </div>
         </div>
 
       </div>

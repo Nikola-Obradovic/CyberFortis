@@ -4,12 +4,14 @@ import matrixImg from '../../assets/matrix.png';
 
 const positions = [
   {
-    title: 'Senior Security Inženjer',
+    title: 'Junior Cyber Security Inženjer (m/ž)',
     type: 'Puno radno vrijeme',
+    hash: 'junior-cyber-security',
   },
   {
-    title: 'Senior Security Inženjer',
+    title: 'Medior Cyber Security Inženjer (m/ž)',
     type: 'Puno radno vrijeme',
+    hash: 'medior-cyber-security',
   },
 ];
 
@@ -47,9 +49,10 @@ export default function Careers() {
           {/* Right - Position cards */}
           <div className="space-y-4">
             {positions.map((position, index) => (
-              <div
+              <Link
                 key={index}
-                className="group bg-cyber-card border border-border rounded-xl p-6 hover:border-accent-red/30 transition-all"
+                to={`/karijere#${position.hash}`}
+                className="group block bg-cyber-card border border-border rounded-xl p-6 hover:border-accent-red/30 transition-all"
               >
                 <div className="flex items-center justify-between">
                   <div>
@@ -60,11 +63,11 @@ export default function Careers() {
                   </div>
                   <ArrowRight className="w-5 h-5 text-text-muted group-hover:text-accent-red group-hover:translate-x-1 transition-all" />
                 </div>
-              </div>
+              </Link>
             ))}
 
             <Link
-              to="/kontakt"
+              to="/karijere"
               className="inline-flex items-center gap-2 text-accent-red hover:text-white transition-colors mt-4"
             >
               Pogledaj sve pozicije

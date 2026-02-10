@@ -10,9 +10,10 @@ const footerLinks = {
     { name: 'Odgovor na incidente', path: '/usluge#incident' },
   ],
   tvrtka: [
+    { name: 'Početna', path: '/' },
+    { name: 'Usluge', path: '/usluge' },
     { name: 'O nama', path: '/o-nama' },
     { name: 'Karijere', path: '/karijere' },
-    { name: 'Blog', path: '/blog' },
     { name: 'Kontakt', path: '/kontakt' },
   ],
 };

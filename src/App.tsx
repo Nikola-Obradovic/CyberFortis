@@ -7,6 +7,7 @@ const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const ServicesPage = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
+const Karijere = lazy(() => import('./pages/Karijere'));
 
 // Loading fallback component
 function PageLoader() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="o-nama" element={<About />} />
             <Route path="usluge" element={<ServicesPage />} />
             <Route path="kontakt" element={<Contact />} />
+            <Route path="karijere" element={<Karijere />} />
           </Route>
         </Routes>
       </Suspense>

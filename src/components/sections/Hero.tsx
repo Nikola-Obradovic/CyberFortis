@@ -63,7 +63,7 @@ export default function Hero() {
   const stat3 = useCountUp(15, 1500);
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center bg-grid overflow-hidden">
+    <section className="relative min-h-[90vh] flex flex-col items-center justify-center bg-grid overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-cyber-dark via-cyber-dark to-cyber-darker" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-red/5 rounded-full blur-3xl" />
@@ -75,6 +75,10 @@ export default function Hero() {
           <div
             className="absolute top-0 left-1/2 -translate-x-1/2 w-screen h-full bg-repeat bg-center pointer-events-none"
             style={{ backgroundImage: `url(${redCubes})`, backgroundSize: '300px auto' }}
+          />
+          <div
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-screen h-full pointer-events-none"
+            style={{ background: 'linear-gradient(to right, transparent 0%, black 100%)' }}
           />
 
           {/* Badge */}

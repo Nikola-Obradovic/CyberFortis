@@ -8,6 +8,7 @@ const footerLinks = {
     { name: 'Penetracijsko testiranje', path: '/usluge#pentest' },
     { name: 'SOC usluge', path: '/usluge#soc' },
     { name: 'Odgovor na incidente', path: '/usluge#incident' },
+    { name: 'NIS2 usklađenost', path: '/usluge#uskladjenost' },
   ],
   tvrtka: [
     { name: 'Početna', path: '/' },

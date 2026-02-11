@@ -8,12 +8,12 @@ import {
 } from 'lucide-react';
 
 const industries = [
-  { icon: Landmark, name: 'Financije i bankarstvo' },
-  { icon: Heart, name: 'Zdravstvo' },
-  { icon: Building2, name: 'Javni sektor' },
-  { icon: Factory, name: 'Proizvodnja' },
-  { icon: ShoppingCart, name: 'Maloprodaja' },
-  { icon: Plane, name: 'Transport i logistika' },
+  { icon: Landmark, name: 'Financije i bankarstvo', regulation: 'NIS2, DORA' },
+  { icon: Heart, name: 'Zdravstvo', regulation: 'NIS2, GDPR' },
+  { icon: Building2, name: 'Javni sektor', regulation: 'NIS2' },
+  { icon: Factory, name: 'Proizvodnja', regulation: 'NIS2' },
+  { icon: ShoppingCart, name: 'Maloprodaja', regulation: 'GDPR' },
+  { icon: Plane, name: 'Transport i logistika', regulation: 'NIS2, DORA' },
 ];
 
 export default function Industries() {
@@ -42,6 +42,9 @@ export default function Industries() {
                 <industry.icon className="w-5 h-5 text-accent-red" />
                 <span className="text-text-primary text-sm font-medium whitespace-nowrap">
                   {industry.name}
+                </span>
+                <span className="text-[10px] font-medium text-accent-cyan bg-accent-cyan/10 rounded px-1.5 py-0.5">
+                  {industry.regulation}
                 </span>
               </div>
             ))}

@@ -25,6 +25,7 @@ const benefits = [
   'Partnerski odnos, ne samo usluga',
   'Kontinuirano praćenje novih prijetnji',
   'Brza implementacija zaštitnih mjera',
+  'Stručnost za NIS2, DORA i GDPR usklađenost',
 ];
 
 export default function WhyUs() {

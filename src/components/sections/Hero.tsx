@@ -92,8 +92,8 @@ export default function Hero() {
           </h1>
 
           <p className="relative text-lg sm:text-xl text-white max-w-3xl mx-auto">
-            Proaktivna kibernetička sigurnost za moderne prijetnje. Naš tim stručnjaka
-            štiti vaše poslovanje s najnovijim tehnologijama i metodologijama.
+            Proaktivna kibernetička sigurnost i NIS2 usklađenost za vaše poslovanje.
+            Naš tim stručnjaka štiti vaše digitalne resurse i osigurava regulatornu spremnost.
           </p>
 
           <div className="h-10" />

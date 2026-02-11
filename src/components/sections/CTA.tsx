@@ -13,8 +13,8 @@ export default function CTA() {
           Spremni za sigurnije poslovanje?
         </h2>
         <p className="text-lg text-text-muted mb-10 max-w-2xl mx-auto">
-          Zakažite besplatnu konzultaciju s našim stručnjacima. Analizirat ćemo vaše
-          potrebe i predložiti optimalno rješenje za vašu organizaciju.
+          Zakažite besplatnu NIS2, DORA ili GDPR procjenu s našim stručnjacima. Analizirat ćemo vaše
+          potrebe i predložiti optimalno rješenje za usklađenost vaše organizacije.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

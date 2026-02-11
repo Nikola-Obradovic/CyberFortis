@@ -67,7 +67,7 @@ export default function About() {
               Predvodnici kibernetičke sigurnosti u Hrvatskoj
             </h1>
             <p className="text-xl text-text-muted leading-relaxed">
-              CyberFortis je vodeća hrvatska tvrtka za kibernetičku sigurnost.
+              CyberFortis je hrvatska tvrtka za kibernetičku sigurnost.
               Osnovani smo s misijom zaštite digitalnih resursa hrvatskih tvrtki i
               institucija od sve sofisticiranijih prijetnji.
             </p>
@@ -82,7 +82,7 @@ export default function About() {
             <div>
               <p className="text-accent-red font-medium mb-3">Naša priča</p>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Cyberfortis – Hrvatski startup koji spaja domaće iskustvo iz industrije sa cyber security projektima u regiji
+                Cyberfortis – Hrvatski tvrtka koja spaja domaće iskustvo iz industrije sa cyber security projektima u regiji
               </h2>
               <div className="space-y-4 text-text-muted leading-relaxed">
                 <p>

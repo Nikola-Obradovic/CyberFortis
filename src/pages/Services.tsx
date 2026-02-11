@@ -8,6 +8,7 @@ import {
   Bug,
   Laptop,
   Network,
+  FileCheck,
   ArrowRight,
 } from 'lucide-react';
 import { useEffect } from 'react';
@@ -77,6 +78,21 @@ const services = [
       'Podrška za NIS2 i DORA regulativu',
     ],
     image: databaseProtectionImg,
+  },
+  {
+    id: 'uskladjenost',
+    icon: FileCheck,
+    title: 'NIS2 i regulatorna usklađenost',
+    description:
+      'Gap analiza i procjena spremnosti za NIS2, DORA i GDPR. Izrada sigurnosnih politika i kontinuirana podrška za regulatornu usklađenost.',
+    features: [
+      'NIS2 gap analiza',
+      'DORA procjena spremnosti',
+      'GDPR revizija i usklađenost',
+      'Izrada sigurnosnih politika i procedura',
+      'Priprema za regulatorne audite',
+    ],
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop',
   },
   {
     id: 'pam',

@@ -8,6 +8,7 @@ import {
   Bug,
   Laptop,
   Network,
+  FileCheck,
   ArrowRight,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -41,6 +42,13 @@ const services = [
     title: 'Zaštita baza podataka',
     description:
       'Kompletan monitoring, blokiranje i zaštita strukturiranih podataka u vašim bazama podataka, brže vrijeme rješavanja revizije i compliance-a (NIS2, DORA).',
+  },
+  {
+    id: 'uskladjenost',
+    icon: FileCheck,
+    title: 'NIS2 i regulatorna usklađenost',
+    description:
+      'Gap analiza i procjena spremnosti za NIS2, DORA i GDPR. Izrada sigurnosnih politika i kontinuirana podrška za regulatornu usklađenost.',
   },
   {
     id: 'pam',

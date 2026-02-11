@@ -101,7 +101,7 @@ export default function Header() {
               onClick={handleCtaClick}
               className="bg-accent-red hover:bg-accent-red-hover text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:shadow-accent-red/20"
             >
-              Besplatna procjena
+              NIS2 procjena
             </a>
           </nav>
 
@@ -158,7 +158,7 @@ export default function Header() {
           className="mt-4 bg-accent-red hover:bg-accent-red-hover text-white px-8 py-4 rounded-lg text-xl font-medium transition-all duration-200"
           style={{ transitionDelay: isMobileMenuOpen ? `${navLinks.length * 50}ms` : '0ms' }}
         >
-          Besplatna procjena
+          NIS2 procjena
         </a>
       </nav>
     </div>

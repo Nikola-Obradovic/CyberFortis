@@ -2,13 +2,12 @@ import { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import checkPointLogo from '../../assets/Check-Point-2024-logo-reversed.png';
 import  ibmLogo from '../../assets/IBM_Partner_Plus_silver_partner_mark_rev_white_RGB.png';
+import rubrikLogo from '../../assets/rubrik-logo.svg';
 const partners = [
   { name: 'Check Point', logo: checkPointLogo },
   { name: 'IBM', logo: ibmLogo },
-  { name: 'Partner 3', logo: 'https://via.placeholder.com/200x80/161b22/8a8a8a?text=Partner+3' },
-  { name: 'Partner 4', logo: 'https://via.placeholder.com/200x80/161b22/8a8a8a?text=Partner+4' },
-  { name: 'Partner 5', logo: 'https://via.placeholder.com/200x80/161b22/8a8a8a?text=Partner+5' },
-  { name: 'Partner 6', logo: 'https://via.placeholder.com/200x80/161b22/8a8a8a?text=Partner+6' },
+  { name: 'Rubrik', logo: rubrikLogo },
+  
 ];
 
 export default function Partners() {

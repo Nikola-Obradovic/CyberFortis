@@ -1,5 +1,4 @@
 import { Shield, Target, Eye, Users } from 'lucide-react';
-import Partners from '../components/sections/Partners';
 import CTA from '../components/sections/CTA';
 
 const values = [
@@ -167,8 +166,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Partners Section */}
-      <Partners />
+    
 
       <CTA />
     </div>

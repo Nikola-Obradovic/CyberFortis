@@ -274,7 +274,7 @@ export default function Karijere() {
           <div className="inline-flex items-center gap-3 bg-accent-red/10 border border-accent-red/20 rounded-full px-5 py-2.5">
             <Briefcase className="w-5 h-5 text-accent-red" />
             <span className="text-white font-semibold">
-              Otvorenih pozicija: {positions.length}
+              Otvorenih pozicija: 6
             </span>
           </div>
         </div>

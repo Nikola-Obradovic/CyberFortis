@@ -19,16 +19,16 @@ export default function CTA() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button href="/kontakt" size="lg" scrollToForm>
-            Zakažite besplatnu procjenu
+            Zakažite NIS2 procjenu
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
           <span className="text-text-muted">
             ili nazovite{' '}
             <a
-              href="tel:+385123456789"
+              href="tel:+385993022490"
               className="text-white hover:text-accent-red transition-colors"
             >
-              +385 1 234 5678
+              +385 99 3022 490
             </a>
           </span>
         </div>

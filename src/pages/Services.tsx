@@ -15,24 +15,25 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Button from '../components/ui/Button';
 import CTA from '../components/sections/CTA';
+import nis2IllustrationImg from '../assets/nis2-illustration.svg';
 import databaseProtectionImg from '../assets/database-protection.svg';
 import pamIllustrationImg from '../assets/pam-illustration.svg';
 
 const services = [
   {
-    id: 'procjene',
-    icon: Search,
-    title: 'Sigurnosne procjene',
+    id: 'uskladjenost',
+    icon: FileCheck,
+    title: 'NIS2 i regulatorna usklađenost',
     description:
-      'Temeljita analiza vaše IT infrastrukture za identifikaciju ranjivosti i sigurnosnih propusta prije nego ih napadači iskoriste.',
+      'Gap analiza i procjena spremnosti za NIS2, DORA i GDPR. Izrada sigurnosnih politika i kontinuirana podrška za regulatornu usklađenost.',
     features: [
-      'Analiza mrežne infrastrukture',
-      'Pregled sigurnosnih politika',
-      'Procjena ranjivosti sustava',
-      'Analiza konfiguracija',
-      'Detaljno izvješće s preporukama',
+      'NIS2 gap analiza',
+      'DORA procjena spremnosti',
+      'GDPR revizija i usklađenost',
+      'Izrada sigurnosnih politika i procedura',
+      'Priprema za regulatorne audite',
     ],
-    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop',
+    image: nis2IllustrationImg,
   },
   {
     id: 'pentest',
@@ -78,21 +79,6 @@ const services = [
       'Podrška za NIS2 i DORA regulativu',
     ],
     image: databaseProtectionImg,
-  },
-  {
-    id: 'uskladjenost',
-    icon: FileCheck,
-    title: 'NIS2 i regulatorna usklađenost',
-    description:
-      'Gap analiza i procjena spremnosti za NIS2, DORA i GDPR. Izrada sigurnosnih politika i kontinuirana podrška za regulatornu usklađenost.',
-    features: [
-      'NIS2 gap analiza',
-      'DORA procjena spremnosti',
-      'GDPR revizija i usklađenost',
-      'Izrada sigurnosnih politika i procedura',
-      'Priprema za regulatorne audite',
-    ],
-    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop',
   },
   {
     id: 'pam',
@@ -168,6 +154,21 @@ const services = [
       'Post-incident izvještavanje',
     ],
     image: 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&h=400&fit=crop',
+  },
+  {
+    id: 'procjene',
+    icon: Search,
+    title: 'Sigurnosne procjene',
+    description:
+      'Temeljita analiza vaše IT infrastrukture za identifikaciju ranjivosti i sigurnosnih propusta prije nego ih napadači iskoriste.',
+    features: [
+      'Analiza mrežne infrastrukture',
+      'Pregled sigurnosnih politika',
+      'Procjena ranjivosti sustava',
+      'Analiza konfiguracija',
+      'Detaljno izvješće s preporukama',
+    ],
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop',
   },
 ];
 

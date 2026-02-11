@@ -158,20 +158,8 @@ export default function Footer() {
             © {new Date().getFullYear()} CyberFortis. Sva prava pridržana.
           </p>
           <div className="flex gap-6">
-            <a
-              href="/privatnost"
-              onClick={(e) => handleLinkClick(e, '/privatnost')}
-              className="text-text-muted hover:text-white text-sm transition-colors"
-            >
-              Politika privatnosti
-            </a>
-            <a
-              href="/uvjeti"
-              onClick={(e) => handleLinkClick(e, '/uvjeti')}
-              className="text-text-muted hover:text-white text-sm transition-colors"
-            >
-              Uvjeti korištenja
-            </a>
+        
+    
           </div>
         </div>
       </div>

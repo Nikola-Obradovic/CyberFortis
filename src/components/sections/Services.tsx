@@ -16,11 +16,11 @@ import Button from '../ui/Button';
 
 const services = [
   {
-    id: 'procjene',
-    icon: Search,
-    title: 'Sigurnosne procjene',
+    id: 'uskladjenost',
+    icon: FileCheck,
+    title: 'NIS2 i regulatorna usklađenost',
     description:
-      'Temeljita analiza vaše IT infrastrukture za identifikaciju ranjivosti i sigurnosnih propusta prije nego ih napadači iskoriste.',
+      'Gap analiza i procjena spremnosti za NIS2, DORA i GDPR. Izrada sigurnosnih politika i kontinuirana podrška za regulatornu usklađenost.',
   },
   {
     id: 'pentest',
@@ -42,13 +42,6 @@ const services = [
     title: 'Zaštita baza podataka',
     description:
       'Kompletan monitoring, blokiranje i zaštita strukturiranih podataka u vašim bazama podataka, brže vrijeme rješavanja revizije i compliance-a (NIS2, DORA).',
-  },
-  {
-    id: 'uskladjenost',
-    icon: FileCheck,
-    title: 'NIS2 i regulatorna usklađenost',
-    description:
-      'Gap analiza i procjena spremnosti za NIS2, DORA i GDPR. Izrada sigurnosnih politika i kontinuirana podrška za regulatornu usklađenost.',
   },
   {
     id: 'pam',
@@ -84,6 +77,13 @@ const services = [
     title: 'Odgovor na incidente',
     description:
       'Brza i učinkovita reakcija na sigurnosne incidente. Minimiziramo štetu i pomažemo u oporavku vaših sustava.',
+  },
+  {
+    id: 'procjene',
+    icon: Search,
+    title: 'Sigurnosne procjene',
+    description:
+      'Temeljita analiza vaše IT infrastrukture za identifikaciju ranjivosti i sigurnosnih propusta prije nego ih napadači iskoriste.',
   },
 ];
 

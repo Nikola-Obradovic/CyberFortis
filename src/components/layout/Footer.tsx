@@ -1,5 +1,5 @@
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin} from 'lucide-react';
 import logo from '../../assets/logo.svg';
 
 const footerLinks = {

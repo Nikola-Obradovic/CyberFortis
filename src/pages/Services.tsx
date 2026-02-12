@@ -26,7 +26,6 @@ const services = [
   {
     id: 'uskladjenost',
     icon: FileCheck,
-    iconImage: artboard1,
     title: 'NIS2 i regulatorna usklađenost',
     description:
       'Gap analiza i procjena spremnosti za NIS2, DORA i GDPR. Izrada sigurnosnih politika i kontinuirana podrška za regulatornu usklađenost.',
@@ -164,6 +163,7 @@ const services = [
   {
     id: 'procjene',
     icon: Search,
+    iconImage: artboard1,
     title: 'Sigurnosne procjene',
     description:
       'Temeljita analiza vaše IT infrastrukture za identifikaciju ranjivosti i sigurnosnih propusta prije nego ih napadači iskoriste.',

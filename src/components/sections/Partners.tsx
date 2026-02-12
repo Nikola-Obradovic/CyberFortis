@@ -14,6 +14,14 @@ export default function Partners() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [itemsToShow, setItemsToShow] = useState(1);
+
+  useEffect(() => {
+    const update = () => setItemsToShow(window.innerWidth >= 768 ? 3 : 1);
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
 
   const totalPartners = partners.length;
   // Create extended array for seamless loop: [...partners, ...partners, ...partners]
@@ -104,13 +112,13 @@ export default function Partners() {
             <div
               className={`flex ${isTransitioning ? 'transition-transform duration-500 ease-in-out' : ''}`}
               style={{
-                transform: `translateX(-${currentIndex * (100 / 3)}%)`,
+                transform: `translateX(-${currentIndex * (100 / itemsToShow)}%)`,
               }}
             >
               {extendedPartners.map((partner, idx) => (
                 <div
                   key={`${partner.name}-${idx}`}
-                  className="flex-shrink-0 w-1/3 px-2 md:px-4"
+                  className="flex-shrink-0 w-full md:w-1/3 px-2 md:px-4"
                 >
                   <div className="flex items-center justify-center p-4 md:p-6 h-24 md:h-28 bg-cyber-card border border-border rounded-xl transition-all duration-300">
                     <img

@@ -55,7 +55,7 @@ const positions: JobPosition[] = [
       'Mogućnost napredovanja u Medior Cyber Security Inženjera',
       'Fleksibilno radno vrijeme / hibridni ili remote rad (po dogovoru)',
     ],
-    deadline: '16.02.2026.',
+    deadline: '31.03.2026.',
   },
   {
     id: 'medior-cyber-security',
@@ -93,7 +93,7 @@ const positions: JobPosition[] = [
       'Kontinuirano učenje i profesionalni razvoj',
       'Podršku za certifikacije i edukacije',
     ],
-    deadline: '16.02.2026.',
+    deadline: '31.03.2026.',
   },
 ];
 

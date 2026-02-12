@@ -13,6 +13,9 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from '../ui/Button';
+import artboard1 from '../../assets/Artboard 1@2x.webp';
+import artboard2 from '../../assets/Artboard 2@2x.webp';
+import artboard3 from '../../assets/Artboard 3@2x.webp';
 
 const services = [
   {
@@ -25,6 +28,7 @@ const services = [
   {
     id: 'pentest',
     icon: Shield,
+    iconImage: artboard2,
     title: 'Penetracijsko testiranje',
     description:
       'Simulirani napadi na vaše sustave kako bismo otkrili slabosti i testirali vašu obranu u kontroliranim uvjetima.',
@@ -32,6 +36,7 @@ const services = [
   {
     id: 'soc',
     icon: Monitor,
+    iconImage: artboard3,
     title: 'SOC usluge',
     description:
       'Neprekidni nadzor vaše mreže i sustava. Naš Security Operations Center detektira i reagira na prijetnje u realnom vremenu.',
@@ -81,6 +86,7 @@ const services = [
   {
     id: 'procjene',
     icon: Search,
+    iconImage: artboard1,
     title: 'Sigurnosne procjene',
     description:
       'Temeljita analiza vaše IT infrastrukture za identifikaciju ranjivosti i sigurnosnih propusta prije nego ih napadači iskoriste.',
@@ -118,7 +124,11 @@ export default function Services() {
 
                 {/* Icon & Title */}
                 <div className="flex items-center gap-4 md:w-80 flex-shrink-0">
-                  <service.icon className="w-6 h-6 text-accent-red" />
+                  {service.iconImage ? (
+                    <img src={service.iconImage} alt="" className="w-9 h-9" />
+                  ) : (
+                    <service.icon className="w-6 h-6 text-accent-red" />
+                  )}
                   <h3 className="text-xl font-semibold text-white group-hover:text-accent-red transition-colors">
                     {service.title}
                   </h3>

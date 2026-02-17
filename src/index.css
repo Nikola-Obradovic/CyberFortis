@@ -25,6 +25,14 @@
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
+/* Font-display fallback while Google Fonts loads async */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-display: swap;
+  src: local('Inter');
+}
+
 /* Base styles */
 html {
   scroll-behavior: smooth;

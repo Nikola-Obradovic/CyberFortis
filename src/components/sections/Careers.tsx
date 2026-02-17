@@ -1,6 +1,6 @@
 import { ArrowRight, Briefcase } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import matrixImg from '../../assets/matrix.png';
+import matrixImg from '../../assets/matrix.webp';
 
 const positions = [
   {
@@ -30,6 +30,9 @@ export default function Careers() {
             <img
               src={matrixImg}
               alt="Matrix"
+              width={600}
+              height={400}
+              loading="lazy"
               className="rounded-xl mb-8 w-full"
             />
 

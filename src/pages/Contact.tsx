@@ -1,9 +1,15 @@
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import SEO from '../components/SEO';
 import contactIllustration from '../assets/contact-illustration.svg';
 
 export default function Contact() {
   return (
     <div className="pt-20">
+      <SEO
+        title="Kontakt"
+        description="Kontaktirajte CyberFortis - vaš partner za kibernetičku sigurnost. Adresa: Trnjanska cesta 59, Zagreb. Email: info@cyberfortis.hr."
+        path="/kontakt"
+      />
       {/* Hero Section */}
       <section className="py-20 lg:py-32 bg-cyber-dark bg-grid">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -96,6 +102,9 @@ export default function Contact() {
               <img
                 src={contactIllustration}
                 alt="Defensive cybersecurity shield illustration"
+                width={512}
+                height={512}
+                loading="lazy"
                 className="w-full max-w-lg"
               />
             </div>

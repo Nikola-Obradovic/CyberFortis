@@ -39,6 +39,9 @@ export default function WhyUs() {
               <img
                 src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop"
                 alt="Cyber Security Operations"
+                width={800}
+                height={600}
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             </div>

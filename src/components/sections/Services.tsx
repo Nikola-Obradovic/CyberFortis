@@ -125,7 +125,7 @@ export default function Services() {
                 {/* Icon & Title */}
                 <div className="flex items-center gap-4 md:w-80 flex-shrink-0">
                   {service.iconImage ? (
-                    <img src={service.iconImage} alt="" className="w-9 h-9" />
+                    <img src={service.iconImage} alt={service.title} className="w-9 h-9" />
                   ) : (
                     <service.icon className="w-6 h-6 text-accent-red" />
                   )}

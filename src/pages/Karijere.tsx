@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Shield, Briefcase, ChevronDown, MapPin, Clock, Mail, ArrowRight } from 'lucide-react';
+import SEO from '../components/SEO';
 import Button from '../components/ui/Button';
 
 interface JobPosition {
@@ -251,6 +252,11 @@ export default function Karijere() {
 
   return (
     <div className="bg-cyber-dark">
+      <SEO
+        title="Karijere"
+        description="Pridruži se CyberFortis timu - otvorene pozicije za cyber security inženjere. Gradi karijeru u kibernetičkoj sigurnosti u Hrvatskoj."
+        path="/karijere"
+      />
       {/* Hero */}
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-cyber-darker via-cyber-dark to-cyber-dark" />

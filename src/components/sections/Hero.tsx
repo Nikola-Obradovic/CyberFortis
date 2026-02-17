@@ -64,6 +64,8 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[90vh] flex flex-col items-center justify-center bg-grid overflow-hidden">
+      {/* Preload LCP background image */}
+      <img src={redCubes} alt="" fetchPriority="high" className="absolute w-0 h-0" aria-hidden="true" />
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-cyber-dark via-cyber-dark to-cyber-darker" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-red/5 rounded-full blur-3xl" />

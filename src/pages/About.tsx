@@ -1,4 +1,5 @@
 import { Shield, Target, Eye, Users } from 'lucide-react';
+import SEO from '../components/SEO';
 import CTA from '../components/sections/CTA';
 
 const values = [
@@ -58,6 +59,11 @@ const team = [
 export default function About() {
   return (
     <div className="pt-20">
+      <SEO
+        title="O nama"
+        description="CyberFortis - hrvatska tvrtka za kibernetičku sigurnost. Upoznajte naš stručni tim, vrijednosti i misiju zaštite digitalnih resursa."
+        path="/o-nama"
+      />
       {/* Hero Section */}
       <section className="py-20 lg:py-32 bg-cyber-dark bg-grid">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -100,6 +106,9 @@ export default function About() {
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop"
                 alt="CyberFortis tim"
+                width={600}
+                height={400}
+                loading="lazy"
                 className="rounded-2xl w-full"
               />
               <div className="absolute -bottom-6 -left-6 bg-accent-red text-white rounded-2xl p-6 shadow-xl hidden md:block">
@@ -155,6 +164,9 @@ export default function About() {
                 <img
                   src={member.image}
                   alt={member.name}
+                  width={300}
+                  height={300}
+                  loading="lazy"
                   className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
                 />
                 <h3 className="text-lg font-semibold text-white">{member.name}</h3>

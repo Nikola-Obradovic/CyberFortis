@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import checkPointLogo from '../../assets/Check-Point-2024-logo-reversed.png';
-import  ibmLogo from '../../assets/IBM_Partner_Plus_silver_partner_mark_rev_white_RGB.png';
+import  ibmLogo from '../../assets/IBM_Partner_Plus_silver_partner_mark_rev_white_RGB.webp';
 import rubrikLogo from '../../assets/rubrik-logo.svg';
 const partners = [
   { name: 'Check Point', logo: checkPointLogo },
@@ -124,6 +124,9 @@ export default function Partners() {
                     <img
                       src={partner.logo}
                       alt={partner.name}
+                      width={200}
+                      height={80}
+                      loading="lazy"
                       className="max-h-16 md:max-h-20 w-auto"
                     />
                   </div>

@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 import Button from '../components/ui/Button';
 import CTA from '../components/sections/CTA';
 import nis2IllustrationImg from '../assets/nis2-illustration.svg';
@@ -195,6 +196,11 @@ export default function ServicesPage() {
 
   return (
     <div className="pt-20">
+      <SEO
+        title="Usluge"
+        description="Sveobuhvatne usluge kibernetičke sigurnosti - penetracijsko testiranje, SOC, NIS2 usklađenost, zaštita baza podataka, EDR i mrežna zaštita."
+        path="/usluge"
+      />
       {/* Hero Section */}
       <section className="py-20 lg:py-32 bg-cyber-dark bg-grid">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -227,7 +233,7 @@ export default function ServicesPage() {
                   <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
                     <div className="flex items-center gap-3 mb-4">
                       {service.iconImage ? (
-                        <img src={service.iconImage} alt="" className="w-11 h-11" />
+                        <img src={service.iconImage} alt={service.title} width={44} height={44} loading="lazy" className="w-11 h-11" />
                       ) : (
                         <service.icon className="w-8 h-8 text-accent-red" />
                       )}
@@ -255,6 +261,9 @@ export default function ServicesPage() {
                     <img
                       src={service.image}
                       alt={service.title}
+                      width={600}
+                      height={400}
+                      loading="lazy"
                       className="rounded-2xl w-full aspect-video object-cover"
                     />
                   </div>

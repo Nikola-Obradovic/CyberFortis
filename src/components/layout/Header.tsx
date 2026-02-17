@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logo from '../../assets/logo.svg';
@@ -17,12 +17,19 @@ export default function Header() {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const ticking = useRef(false);
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      if (!ticking.current) {
+        ticking.current = true;
+        requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 50);
+          ticking.current = false;
+        });
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -77,7 +84,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" onClick={(e) => handleNavClick(e, '/')} className="flex-shrink-0">
-            <img src={logo} alt="CyberFortis" className="h-12 w-auto" />
+            <img src={logo} alt="CyberFortis" width={120} height={48} className="h-12 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

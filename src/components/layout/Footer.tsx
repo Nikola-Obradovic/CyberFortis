@@ -56,7 +56,7 @@ export default function Footer() {
           {/* Logo & Description */}
           <div className="lg:col-span-1">
             <a href="/" onClick={(e) => handleLinkClick(e, '/')}>
-              <img src={logo} alt="CyberFortis" className="h-10 w-auto mb-4" />
+              <img src={logo} alt="CyberFortis" width={100} height={40} loading="lazy" className="h-10 w-auto mb-4" />
             </a>
             <p className="text-text-muted text-sm leading-relaxed mb-6">
               Vaš pouzdan partner u zaštiti digitalnih resursa. Pružamo proaktivnu

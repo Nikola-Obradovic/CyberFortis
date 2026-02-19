@@ -22,7 +22,7 @@ export default function Careers() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left - Content */}
           <div>
-            <p className="text-accent-red font-medium mb-3">Karijera</p>
+            <p className="text-accent-red font-bold text-[19px] mb-3">Karijera</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               Pridruži se našem timu
             </h2>
@@ -71,7 +71,7 @@ export default function Careers() {
 
             <Link
               to="/karijere"
-              className="inline-flex items-center gap-2 text-accent-red hover:text-white transition-colors mt-4"
+              className="inline-flex items-center gap-2 text-accent-red hover:text-white transition-colors mt-4 font-bold text-[19px]"
             >
               Pogledaj sve pozicije
               <ArrowRight className="w-4 h-4" />

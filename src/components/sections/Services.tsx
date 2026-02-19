@@ -99,7 +99,7 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-20">
-          <p className="text-accent-red font-medium mb-3">Što radimo</p>
+          <p className="text-accent-red font-bold text-[19px] mb-3">Što radimo</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Sveobuhvatna zaštita za vaše digitalno poslovanje
           </h2>
@@ -118,7 +118,7 @@ export default function Services() {
             >
               <div className="flex flex-col md:flex-row md:items-center gap-6">
                 {/* Number */}
-                <div className="text-text-muted/30 text-5xl font-bold w-20 flex-shrink-0">
+                <div className="text-text-muted/50 text-5xl font-bold w-20 flex-shrink-0">
                   {String(index + 1).padStart(2, '0')}
                 </div>
 

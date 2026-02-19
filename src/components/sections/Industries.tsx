@@ -23,7 +23,7 @@ export default function Industries() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
           {/* Left - Text */}
           <div className="lg:max-w-md">
-            <p className="text-accent-red font-medium mb-3">Industrije</p>
+            <p className="text-accent-red font-bold text-[19px] mb-3">Industrije</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Industrije koje štitimo
             </h2>

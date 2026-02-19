@@ -86,7 +86,7 @@ export default function Partners() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-accent-red font-medium mb-3">Partneri</p>
+          <p className="text-accent-red font-bold text-[19px] mb-3">Partneri</p>
           <h2 className="text-2xl md:text-3xl font-bold text-white">
             Tvrtke koje nam vjeruju
           </h2>

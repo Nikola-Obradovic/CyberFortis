@@ -205,7 +205,7 @@ export default function ServicesPage() {
       <section className="py-20 lg:py-32 bg-cyber-dark bg-grid">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-accent-red font-medium mb-3">Usluge</p>
+            <p className="text-accent-red font-bold text-[19px] mb-3">Usluge</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Sveobuhvatne sigurnosne usluge
             </h1>

@@ -26,7 +26,7 @@ export default function Button({
   const location = useLocation();
 
   const baseStyles =
-    'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200';
+    'inline-flex items-center justify-center font-bold rounded-lg transition-all duration-200';
 
   const variants = {
     primary:
@@ -40,7 +40,7 @@ export default function Button({
   const sizes = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg',
+    lg: 'px-8 py-4 text-[19px]',
   };
 
   const classes = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;

@@ -31,7 +31,7 @@ export default function Process() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <p className="text-accent-red font-medium mb-3">Naš proces</p>
+          <p className="text-accent-red font-bold text-[19px] mb-3">Naš proces</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Kako radimo
           </h2>

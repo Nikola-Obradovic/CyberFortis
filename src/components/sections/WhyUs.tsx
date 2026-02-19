@@ -37,24 +37,24 @@ export default function WhyUs() {
           <div className="relative">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop"
+                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=760&h=570&fit=crop&q=65&fm=webp&auto=format"
                 alt="Cyber Security Operations"
-                width={800}
-                height={600}
+                width={760}
+                height={570}
                 loading="lazy"
                 className="w-full h-full object-cover"
               />
             </div>
             {/* Floating Stats */}
-            <div className="absolute -bottom-8 -right-4 md:-right-8 bg-accent-red text-white rounded-2xl p-6 shadow-2xl">
+            <div className="absolute -bottom-8 -right-4 md:-right-8 bg-[#b91c1c] text-white rounded-2xl p-6 shadow-2xl">
               <div className="text-4xl font-bold mb-1">99.9%</div>
-              <div className="text-sm opacity-90">Uspješnost u sprječavanju napada</div>
+              <div className="text-sm text-white">Uspješnost u sprječavanju napada</div>
             </div>
           </div>
 
           {/* Right Column - Content */}
           <div>
-            <p className="text-accent-red font-medium mb-3">Zašto mi</p>
+            <p className="text-accent-red font-bold text-[19px] mb-3">Zašto mi</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               Vaša sigurnost je naša misija
             </h2>

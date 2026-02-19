@@ -68,7 +68,7 @@ export default function About() {
       <section className="py-20 lg:py-32 bg-cyber-dark bg-grid">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-accent-red font-medium mb-3">O nama</p>
+            <p className="text-accent-red font-bold text-[19px] mb-3">O nama</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Predvodnici kibernetičke sigurnosti u Hrvatskoj
             </h1>
@@ -86,7 +86,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-accent-red font-medium mb-3">Naša priča</p>
+              <p className="text-accent-red font-bold text-[19px] mb-3">Naša priča</p>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Cyberfortis – Hrvatski tvrtka koja spaja domaće iskustvo iz industrije sa cyber security projektima u regiji
               </h2>
@@ -124,7 +124,7 @@ export default function About() {
       <section className="py-20 lg:py-32 bg-cyber-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-accent-red font-medium mb-3">Naše vrijednosti</p>
+            <p className="text-accent-red font-bold text-[19px] mb-3">Naše vrijednosti</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Principi koji vode svaku našu odluku
             </h2>
@@ -152,7 +152,7 @@ export default function About() {
       <section className="py-20 lg:py-32 bg-cyber-darker hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-accent-red font-medium mb-3">Naš tim</p>
+            <p className="text-accent-red font-bold text-[19px] mb-3">Naš tim</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Upoznajte stručnjake koji štite vaše poslovanje
             </h2>

@@ -6,6 +6,7 @@ import logo from '../../assets/logo.svg';
 const navLinks = [
   { name: 'Početna', path: '/' },
   { name: 'Usluge', path: '/usluge' },
+  { name: 'Naša rješenja', path: '/nasa-rjesenja' },
   { name: 'O nama', path: '/o-nama' },
   { name: 'Karijere', path: '/karijere' },
   { name: 'Kontakt', path: '/kontakt' },

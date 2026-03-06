@@ -1,5 +1,7 @@
 import SEO from '../components/SEO';
 import CTA from '../components/sections/CTA';
+import assetManagementImg from '../assets/asset-management.png';
+import databaseProtectionImg from '../assets/database-protection.svg';
 
 export default function NasaRjesenja() {
   return (
@@ -43,6 +45,58 @@ export default function NasaRjesenja() {
                   <img
                     src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
                     alt="Cyberfortis SIEM"
+                    width={600}
+                    height={400}
+                    loading="lazy"
+                    className="rounded-2xl w-full aspect-video object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Cyberfortis Asset Management */}
+            <div className="bg-cyber-dark border border-white/10 rounded-2xl p-8 lg:p-12">
+              <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                    Cyberfortis Asset Management
+                  </h2>
+                  <p className="text-text-muted text-lg leading-relaxed">
+                    Cyberfortis Asset Management platforma je softversko rješenje koje organizacijama omogućava centralizirano upravljanje, praćenje i optimizaciju digitalnih i fizičkih resursa. Korištenjem jedinstvene platforme, kompanije mogu na jednom mjestu imati pregled nad svojom IT infrastrukturom, opremom, aplikacijama i digitalnim sadržajem.
+                    <br /><br />
+                    Ovakve platforme pomažu u boljoj kontroli troškova, povećanju sigurnosti i efikasnijem upravljanju resursima kroz cijeli njihov životni ciklus – od nabavke do zamjene ili povlačenja iz upotrebe. Automatsko praćenje promjena i detaljni izvještaji omogućavaju menadžmentu da donosi informisane odluke i optimizira poslovne procese.
+                  </p>
+                </div>
+                <div>
+                  <img
+                    src={assetManagementImg}
+                    alt="Cyberfortis Asset Management"
+                    width={600}
+                    height={400}
+                    loading="lazy"
+                    className="rounded-2xl w-full aspect-video object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Cyberfortis Data Protection */}
+            <div className="bg-cyber-dark border border-white/10 rounded-2xl p-8 lg:p-12">
+              <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                    Cyberfortis Data Protection
+                  </h2>
+                  <p className="text-text-muted text-lg leading-relaxed">
+                    Cyberfortis rješenje za monitoring i hardening baza podataka omogućava organizacijama da zaštite svoje najvrijednije podatke kroz kontinuirano praćenje aktivnosti i jačanje sigurnosnih postavki baza. Platforma nadzire pristup bazama podataka u realnom vremenu, prepoznaje sumnjive aktivnosti i pomaže u sprječavanju neovlaštenog pristupa ili zloupotrebe podataka.
+                    <br /><br />
+                    Pored monitoringa, rješenje omogućava hardening baza podataka, odnosno automatsku provjeru sigurnosnih konfiguracija i preporuke za njihovo unapređenje u skladu sa sigurnosnim standardima i najboljim praksama. Na taj način organizacije mogu smanjiti sigurnosne rizike, povećati usklađenost sa regulativama i osigurati stabilno i sigurno okruženje za rad svojih aplikacija.
+                  </p>
+                </div>
+                <div>
+                  <img
+                    src={databaseProtectionImg}
+                    alt="Cyberfortis Data Protection"
                     width={600}
                     height={400}
                     loading="lazy"

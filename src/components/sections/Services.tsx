@@ -16,101 +16,45 @@ import Button from '../ui/Button';
 import artboard1 from '../../assets/Artboard 1@2x.webp';
 import artboard2 from '../../assets/Artboard 2@2x.webp';
 import artboard3 from '../../assets/Artboard 3@2x.webp';
+import { useI18n } from '../../i18n';
+import type { ServiceId } from '../../i18n';
 
-const services = [
-  {
-    id: 'uskladjenost',
-    icon: FileCheck,
-    title: 'NIS2 i regulatorna usklađenost',
-    description:
-      'Gap analiza i procjena spremnosti za NIS2, DORA i GDPR. Izrada sigurnosnih politika i kontinuirana podrška za regulatornu usklađenost.',
-  },
-  {
-    id: 'pentest',
-    icon: Shield,
-    iconImage: artboard2,
-    title: 'Penetracijsko testiranje',
-    description:
-      'Simulirani napadi na vaše sustave kako bismo otkrili slabosti i testirali vašu obranu u kontroliranim uvjetima.',
-  },
-  {
-    id: 'soc',
-    icon: Monitor,
-    iconImage: artboard3,
-    title: 'SOC usluge',
-    description:
-      'Neprekidni nadzor vaše mreže i sustava. Naš Security Operations Center detektira i reagira na prijetnje u realnom vremenu.',
-  },
-  {
-    id: 'baze-podataka',
-    icon: Database,
-    title: 'Zaštita baza podataka',
-    description:
-      'Kompletan monitoring, blokiranje i zaštita strukturiranih podataka u vašim bazama podataka, brže vrijeme rješavanja revizije i compliance-a (NIS2, DORA).',
-  },
-  {
-    id: 'pam',
-    icon: Key,
-    title: 'Upravljanje privilegiranim pristupom (PAM)',
-    description:
-      'Zaštita administratorskih rola, upravljanje zaporkama i kompletan monitoring.',
-  },
-  {
-    id: 'ranjivosti',
-    icon: Bug,
-    title: 'Upravljanje ranjivostima',
-    description:
-      'Rješenje za upravljanje ranjivostima i proaktivno patchiranje kritičnih sistema.',
-  },
-  {
-    id: 'edr',
-    icon: Laptop,
-    title: 'Zaštita endpointa (EDR)',
-    description:
-      'Kompletno rješenje za upravljanje serverima i radnim stanicama. Proaktivna odbrana protiv kibernetičkih prijetnji.',
-  },
-  {
-    id: 'mrezna-zastita',
-    icon: Network,
-    title: 'Mrežna zaštita',
-    description:
-      'U suradnji s vodećim vendorima za zaštitu mrežne infrastrukture, možemo vam ponuditi najbolja rješenja.',
-  },
-  {
-    id: 'incident',
-    icon: AlertTriangle,
-    title: 'Odgovor na incidente',
-    description:
-      'Brza i učinkovita reakcija na sigurnosne incidente. Minimiziramo štetu i pomažemo u oporavku vaših sustava.',
-  },
-  {
-    id: 'procjene',
-    icon: Search,
-    iconImage: artboard1,
-    title: 'Sigurnosne procjene',
-    description:
-      'Temeljita analiza vaše IT infrastrukture za identifikaciju ranjivosti i sigurnosnih propusta prije nego ih napadači iskoriste.',
-  },
+const services: { id: ServiceId; icon: typeof Shield; iconImage?: string }[] = [
+  { id: 'uskladjenost', icon: FileCheck },
+  { id: 'pentest', icon: Shield, iconImage: artboard2 },
+  { id: 'soc', icon: Monitor, iconImage: artboard3 },
+  { id: 'baze-podataka', icon: Database },
+  { id: 'pam', icon: Key },
+  { id: 'ranjivosti', icon: Bug },
+  { id: 'edr', icon: Laptop },
+  { id: 'mrezna-zastita', icon: Network },
+  { id: 'incident', icon: AlertTriangle },
+  { id: 'procjene', icon: Search, iconImage: artboard1 },
 ];
 
+
 export default function Services() {
+  const { t } = useI18n();
+
   return (
     <section className="py-16 lg:py-20 bg-cyber-darker">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-20">
-          <p className="text-accent-red font-bold text-[19px] mb-3">Što radimo</p>
+          <p className="text-accent-red font-bold text-[19px] mb-3">{t.services.eyebrow}</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Sveobuhvatna zaštita za vaše digitalno poslovanje
+            {t.services.title}
           </h2>
           <p className="text-text-muted text-lg">
-            Od procjene rizika do aktivne obrane - pokrivamo sve aspekte kibernetičke sigurnosti.
+            {t.services.subtitle}
           </p>
         </div>
 
         {/* Services List */}
         <div className="space-y-0">
-          {services.map((service, index) => (
+          {services.map((service, index) => {
+            const text = t.services.items[service.id];
+            return (
             <Link
               key={service.id}
               to={`/usluge#${service.id}`}
@@ -125,30 +69,31 @@ export default function Services() {
                 {/* Icon & Title */}
                 <div className="flex items-center gap-4 md:w-80 flex-shrink-0">
                   {service.iconImage ? (
-                    <img src={service.iconImage} alt={service.title} className="w-9 h-9" />
+                    <img src={service.iconImage} alt={text.title} className="w-9 h-9" />
                   ) : (
                     <service.icon className="w-6 h-6 text-accent-red" />
                   )}
                   <h3 className="text-xl font-semibold text-white group-hover:text-accent-red transition-colors">
-                    {service.title}
+                    {text.title}
                   </h3>
                 </div>
 
                 {/* Description */}
                 <p className="text-text-muted flex-grow">
-                  {service.description}
+                  {text.description}
                 </p>
 
                 {/* Arrow */}
                 <ArrowRight className="w-5 h-5 text-text-muted group-hover:text-accent-red group-hover:translate-x-2 transition-all flex-shrink-0 hidden md:block" />
               </div>
             </Link>
-          ))}
+            );
+          })}
         </div>
 
         <div className="mt-12">
           <Button href="/usluge" variant="outline">
-            Pogledajte sve usluge
+            {t.services.viewAll}
             <ArrowRight className="ml-2 w-4 h-4" />
           </Button>
         </div>

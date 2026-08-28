@@ -1,42 +1,23 @@
-const steps = [
-  {
-    number: '01',
-    title: 'Inicijalna konzultacija',
-    description:
-      'Analiziramo vaše poslovanje, identificiramo kritične sustave i definiramo prioritete zaštite.',
-  },
-  {
-    number: '02',
-    title: 'Procjena sigurnosti',
-    description:
-      'Provodimo detaljnu analizu vaše infrastrukture, tražeći ranjivosti i potencijalne prijetnje.',
-  },
-  {
-    number: '03',
-    title: 'Implementacija zaštite',
-    description:
-      'Postavljamo sigurnosne mjere, konfiguriramo sustave i aktiviramo neprekidni nadzor.',
-  },
-  {
-    number: '04',
-    title: 'Kontinuirano praćenje',
-    description:
-      'Redovito izvještavanje, optimizacija zaštite i prilagodba novim prijetnjama.',
-  },
-];
+import { useI18n } from '../../i18n';
 
 export default function Process() {
+  const { t } = useI18n();
+  const steps = t.process.steps.map((step, i) => ({
+    ...step,
+    number: String(i + 1).padStart(2, '0'),
+  }));
+
   return (
     <section className="py-24 lg:py-32 bg-cyber-darker">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <p className="text-accent-red font-bold text-[19px] mb-3">Naš proces</p>
+          <p className="text-accent-red font-bold text-[19px] mb-3">{t.process.eyebrow}</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Kako radimo
+            {t.process.title}
           </h2>
           <p className="text-text-muted text-lg">
-            Strukturiran pristup koji osigurava temeljitu zaštitu vašeg poslovanja.
+            {t.process.subtitle}
           </p>
         </div>
 

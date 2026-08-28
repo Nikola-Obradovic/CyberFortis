@@ -1,26 +1,28 @@
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import SEO from '../components/SEO';
 import contactIllustration from '../assets/contact-illustration.svg';
+import { useI18n } from '../i18n';
 
 export default function Contact() {
+  const { t } = useI18n();
+
   return (
     <div className="pt-20">
       <SEO
-        title="Kontakt"
-        description="Kontaktirajte CyberFortis - vaš partner za kibernetičku sigurnost. Adresa: Trnjanska cesta 59, Zagreb. Email: info@cyberfortis.hr."
+        title={t.contact.seo.title}
+        description={t.contact.seo.description}
         path="/kontakt"
       />
       {/* Hero Section */}
       <section className="py-20 lg:py-32 bg-cyber-dark bg-grid">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-accent-red font-bold text-[19px] mb-3">Kontakt</p>
+            <p className="text-accent-red font-bold text-[19px] mb-3">{t.contact.eyebrow}</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Kontaktirajte nas
+              {t.contact.title}
             </h1>
             <p className="text-xl text-text-muted leading-relaxed">
-              Spremni smo odgovoriti na vaša pitanja i pomoći vam u zaštiti vašeg
-              poslovanja. Javite nam se - prvi korak prema sigurnijem poslovanju.
+              {t.contact.subtitle}
             </p>
           </div>
         </div>
@@ -33,7 +35,7 @@ export default function Contact() {
             {/* Contact Info */}
             <div className="lg:col-span-1 space-y-8">
               <div>
-                <h2 className="text-2xl font-bold text-white mb-6">Informacije</h2>
+                <h2 className="text-2xl font-bold text-white mb-6">{t.contact.infoHeading}</h2>
 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
@@ -41,7 +43,7 @@ export default function Contact() {
                       <Mail className="w-5 h-5 text-accent-red" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-white mb-1">Email</h3>
+                      <h3 className="font-semibold text-white mb-1">{t.contact.email}</h3>
                       <a
                         href="mailto:info@cyberfortis.hr"
                         className="text-text-muted hover:text-white transition-colors"
@@ -56,7 +58,7 @@ export default function Contact() {
                       <Phone className="w-5 h-5 text-accent-red" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-white mb-1">Telefon</h3>
+                      <h3 className="font-semibold text-white mb-1">{t.contact.phone}</h3>
                       <a
                         href="tel:+385993022490"
                         className="text-text-muted hover:text-white transition-colors"
@@ -71,11 +73,11 @@ export default function Contact() {
                       <MapPin className="w-5 h-5 text-accent-red" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-white mb-1">Adresa</h3>
+                      <h3 className="font-semibold text-white mb-1">{t.contact.address}</h3>
                       <p className="text-text-muted">
-                        Trnjanska cesta 59
+                        {t.contact.addressLine1}
                         <br />
-                        10000 Zagreb, Hrvatska
+                        {t.contact.addressLine2}
                       </p>
                     </div>
                   </div>
@@ -85,11 +87,11 @@ export default function Contact() {
                       <Clock className="w-5 h-5 text-accent-red" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-white mb-1">Radno vrijeme</h3>
+                      <h3 className="font-semibold text-white mb-1">{t.contact.hours}</h3>
                       <p className="text-text-muted">
-                        Pon - Pet: 08:00 - 17:00
+                        {t.contact.hoursValue}
                         <br />
-                        <span className="text-accent-red">SOC: Non-stop</span>
+                        <span className="text-accent-red">{t.contact.socHours}</span>
                       </p>
                     </div>
                   </div>
@@ -101,7 +103,7 @@ export default function Contact() {
             <div className="lg:col-span-2 flex items-center justify-center">
               <img
                 src={contactIllustration}
-                alt="Defensive cybersecurity shield illustration"
+                alt={t.contact.illustrationAlt}
                 width={512}
                 height={512}
                 loading="lazy"
@@ -122,7 +124,7 @@ export default function Contact() {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="CyberFortis lokacija"
+          title={t.contact.mapTitle}
         />
       </section>
     </div>

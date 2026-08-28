@@ -2,17 +2,20 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logo from '../../assets/logo.svg';
-
-const navLinks = [
-  { name: 'Početna', path: '/' },
-  { name: 'Usluge', path: '/usluge' },
-  { name: 'Naša rješenja', path: '/nasa-rjesenja' },
-  { name: 'O nama', path: '/o-nama' },
-  { name: 'Karijere', path: '/karijere' },
-  { name: 'Kontakt', path: '/kontakt' },
-];
+import LangToggle from '../ui/LangToggle';
+import { useI18n } from '../../i18n';
 
 export default function Header() {
+  const { t } = useI18n();
+  const navLinks = [
+    { name: t.nav.home, path: '/' },
+    { name: t.nav.services, path: '/usluge' },
+    { name: t.nav.solutions, path: '/nasa-rjesenja' },
+    { name: t.nav.about, path: '/o-nama' },
+    { name: t.nav.careers, path: '/karijere' },
+    { name: t.nav.contact, path: '/kontakt' },
+  ];
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -88,6 +91,7 @@ export default function Header() {
             <img src={logo} alt="CyberFortis" width={120} height={48} className="h-12 w-auto" />
           </Link>
 
+          <div className="flex items-center gap-4 md:gap-6">
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
@@ -109,18 +113,21 @@ export default function Header() {
               onClick={handleCtaClick}
               className="bg-accent-red hover:bg-accent-red-hover text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:shadow-accent-red/20"
             >
-              NIS2 procjena
+              {t.nav.assessment}
             </a>
           </nav>
+
+          <LangToggle />
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-text-primary hover:text-white transition-colors"
-            aria-label="Toggle menu"
+            className="md:hidden p-2 -mr-2 text-text-primary hover:text-white transition-colors"
+            aria-label={t.nav.toggleMenu}
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
+          </div>
         </div>
       </div>
 
@@ -166,7 +173,7 @@ export default function Header() {
           className="mt-4 bg-accent-red hover:bg-accent-red-hover text-white px-8 py-4 rounded-lg text-xl font-medium transition-all duration-200"
           style={{ transitionDelay: isMobileMenuOpen ? `${navLinks.length * 50}ms` : '0ms' }}
         >
-          NIS2 procjena
+          {t.nav.assessment}
         </a>
       </nav>
     </div>

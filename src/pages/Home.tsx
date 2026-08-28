@@ -7,13 +7,16 @@ import Process from '../components/sections/Process';
 import Industries from '../components/sections/Industries';
 import Careers from '../components/sections/Careers';
 import CTA from '../components/sections/CTA';
+import { useI18n } from '../i18n';
 
 export default function Home() {
+  const { t } = useI18n();
+
   return (
     <>
       <SEO
-        title="CyberFortis | Kibernetička sigurnost u Hrvatskoj"
-        description="CyberFortis - Vaš pouzdan partner u zaštiti digitalnih resursa. NIS2 usklađenost, penetracijsko testiranje, SOC usluge i sigurnosne procjene za tvrtke u Hrvatskoj."
+        title={t.home.seo.title}
+        description={t.home.seo.description}
         path="/"
       />
       <Hero />

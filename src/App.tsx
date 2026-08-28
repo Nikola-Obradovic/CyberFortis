@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
+import { I18nProvider } from './i18n';
 
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/Home'));
@@ -21,6 +22,7 @@ function PageLoader() {
 
 function App() {
   return (
+    <I18nProvider>
     <Router>
       <Suspense fallback={<PageLoader />}>
         <Routes>
@@ -35,6 +37,7 @@ function App() {
         </Routes>
       </Suspense>
     </Router>
+    </I18nProvider>
   );
 }
 

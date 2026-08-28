@@ -1,30 +1,27 @@
 import { ArrowRight, Briefcase } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import matrixImg from '../../assets/matrix.webp';
-
-const positions = [
-  {
-    title: 'Junior Cyber Security Inženjer (m/ž)',
-    type: 'Puno radno vrijeme',
-    hash: 'junior-cyber-security',
-  },
-  {
-    title: 'Medior Cyber Security Inženjer (m/ž)',
-    type: 'Puno radno vrijeme',
-    hash: 'medior-cyber-security',
-  },
-];
+import { useI18n } from '../../i18n';
 
 export default function Careers() {
+  const { t } = useI18n();
+  const positions = (
+    Object.keys(t.careersSection.cards) as (keyof typeof t.careersSection.cards)[]
+  ).map((hash) => ({
+    hash,
+    title: t.careersSection.cards[hash],
+    type: t.careersSection.fullTime,
+  }));
+
   return (
     <section className="py-24 lg:py-32 bg-cyber-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left - Content */}
           <div>
-            <p className="text-accent-red font-bold text-[19px] mb-3">Karijera</p>
+            <p className="text-accent-red font-bold text-[19px] mb-3">{t.careersSection.eyebrow}</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Pridruži se našem timu
+              {t.careersSection.title}
             </h2>
 
             <img
@@ -37,15 +34,13 @@ export default function Careers() {
             />
 
             <p className="text-text-muted text-lg mb-8">
-              Tražimo motivirane stručnjake koji žele raditi na najizazovnijim
-              sigurnosnim projektima. Ako želiš graditi karijeru u kibernetičkoj
-              sigurnosti, javi nam se.
+              {t.careersSection.text}
             </p>
 
             {/* Open positions count */}
             <div className="inline-flex items-center gap-3 bg-accent-red/10 border border-accent-red/20 rounded-full px-5 py-2.5">
               <Briefcase className="w-5 h-5 text-accent-red" />
-              <span className="text-white font-semibold">Otvorenih pozicija: 6</span>
+              <span className="text-white font-semibold">{t.careersSection.openPositions}</span>
             </div>
           </div>
 
@@ -73,7 +68,7 @@ export default function Careers() {
               to="/karijere"
               className="inline-flex items-center gap-2 text-accent-red hover:text-white transition-colors mt-4 font-bold text-[19px]"
             >
-              Pogledaj sve pozicije
+              {t.careersSection.viewAll}
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

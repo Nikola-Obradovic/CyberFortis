@@ -6,29 +6,31 @@ import {
   ShoppingCart,
   Plane,
 } from 'lucide-react';
-
-const industries = [
-  { icon: Landmark, name: 'Financije i bankarstvo', regulation: 'NIS2, DORA' },
-  { icon: Heart, name: 'Zdravstvo', regulation: 'NIS2, GDPR' },
-  { icon: Building2, name: 'Javni sektor', regulation: 'NIS2' },
-  { icon: Factory, name: 'Proizvodnja', regulation: 'NIS2' },
-  { icon: ShoppingCart, name: 'Maloprodaja', regulation: 'GDPR' },
-  { icon: Plane, name: 'Transport i logistika', regulation: 'NIS2, DORA' },
-];
+import { useI18n } from '../../i18n';
 
 export default function Industries() {
+  const { t } = useI18n();
+  const industries = [
+    { icon: Landmark, name: t.industries.names.finance, regulation: 'NIS2, DORA' },
+    { icon: Heart, name: t.industries.names.healthcare, regulation: 'NIS2, GDPR' },
+    { icon: Building2, name: t.industries.names.publicSector, regulation: 'NIS2' },
+    { icon: Factory, name: t.industries.names.manufacturing, regulation: 'NIS2' },
+    { icon: ShoppingCart, name: t.industries.names.retail, regulation: 'GDPR' },
+    { icon: Plane, name: t.industries.names.transport, regulation: 'NIS2, DORA' },
+  ];
+
   return (
     <section className="py-24 lg:py-32 bg-cyber-darker border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
           {/* Left - Text */}
           <div className="lg:max-w-md">
-            <p className="text-accent-red font-bold text-[19px] mb-3">Industrije</p>
+            <p className="text-accent-red font-bold text-[19px] mb-3">{t.industries.eyebrow}</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industrije koje štitimo
+              {t.industries.title}
             </h2>
             <p className="text-text-muted">
-              Specijalizirane sigurnosne usluge prilagođene specifičnim zahtjevima vaše industrije.
+              {t.industries.subtitle}
             </p>
           </div>
 

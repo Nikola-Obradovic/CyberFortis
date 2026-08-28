@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import checkPointLogo from '../../assets/Check-Point-2024-logo-reversed.png';
 import  ibmLogo from '../../assets/IBM_Partner_Plus_silver_partner_mark_rev_white_RGB.webp';
 import rubrikLogo from '../../assets/rubrik-logo.svg';
+import { useI18n } from '../../i18n';
 const partners = [
   { name: 'Check Point', logo: checkPointLogo },
   { name: 'IBM', logo: ibmLogo },
@@ -11,6 +12,7 @@ const partners = [
 ];
 
 export default function Partners() {
+  const { t } = useI18n();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -86,9 +88,9 @@ export default function Partners() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-accent-red font-bold text-[19px] mb-3">Partneri</p>
+          <p className="text-accent-red font-bold text-[19px] mb-3">{t.partners.eyebrow}</p>
           <h2 className="text-2xl md:text-3xl font-bold text-white">
-            Tvrtke koje nam vjeruju
+            {t.partners.title}
           </h2>
         </div>
 
@@ -102,7 +104,7 @@ export default function Partners() {
           <button
             onClick={prevSlide}
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-4 z-10 w-10 h-10 bg-cyber-card border border-border rounded-full flex items-center justify-center text-text-muted hover:text-white hover:border-white/30 transition-all"
-            aria-label="Prethodni partner"
+            aria-label={t.partners.prev}
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
@@ -139,7 +141,7 @@ export default function Partners() {
           <button
             onClick={nextSlide}
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-4 z-10 w-10 h-10 bg-cyber-card border border-border rounded-full flex items-center justify-center text-text-muted hover:text-white hover:border-white/30 transition-all"
-            aria-label="Sljedeći partner"
+            aria-label={t.partners.next}
           >
             <ChevronRight className="w-5 h-5" />
           </button>
@@ -156,7 +158,7 @@ export default function Partners() {
                   ? 'bg-accent-red w-6'
                   : 'bg-border hover:bg-text-muted w-2'
               }`}
-              aria-label={`Idi na partner ${idx + 1}`}
+              aria-label={`${t.partners.goTo} ${idx + 1}`}
             />
           ))}
         </div>

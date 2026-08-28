@@ -1,81 +1,39 @@
 import { Shield, Target, Eye, Users } from 'lucide-react';
 import SEO from '../components/SEO';
 import CTA from '../components/sections/CTA';
-
-const values = [
-  {
-    icon: Shield,
-    title: 'Integritet',
-    description:
-      'Djelujemo etički i transparentno. Vaše povjerenje je temelj našeg poslovanja.',
-  },
-  {
-    icon: Target,
-    title: 'Izvrsnost',
-    description:
-      'Težimo savršenstvu u svemu što radimo. Kontinuirano se usavršavamo i pratimo najnovije trendove.',
-  },
-  {
-    icon: Eye,
-    title: 'Proaktivnost',
-    description:
-      'Ne čekamo probleme - predviđamo ih i djelujemo preventivno kako bismo vas zaštitili.',
-  },
-  {
-    icon: Users,
-    title: 'Partnerstvo',
-    description:
-      'Vaš uspjeh je naš uspjeh. Gradimo dugoročne odnose temeljene na uzajamnom povjerenju.',
-  },
-];
-
-const team = [
-  {
-    name: 'Dr. Tomislav Novak',
-    role: 'Direktor i osnivač',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop',
-    bio: '20+ godina iskustva u kibernetičkoj sigurnosti. Bivši voditelj sigurnosti u nacionalnoj banci.',
-  },
-  {
-    name: 'Marina Babić',
-    role: 'Voditeljica SOC tima',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop',
-    bio: 'CISSP certificirana stručnjakinja. Specijalizirana za detekciju i odgovor na napade.',
-  },
-  {
-    name: 'Petar Vuković',
-    role: 'Voditelj penetracijskog testiranja',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop',
-    bio: 'OSCP, CEH certifikati. Otkrio ranjivosti u sustavima Fortune 500 kompanija.',
-  },
-  {
-    name: 'Ivana Matić',
-    role: 'Voditeljica usklađenosti',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',
-    bio: 'Stručnjakinja za GDPR, NIS2 i ISO 27001. Pomaže tvrtkama u regulatornoj usklađenosti.',
-  },
-];
+import { useI18n } from '../i18n';
 
 export default function About() {
+  const { t } = useI18n();
+  const values = [Shield, Target, Eye, Users].map((icon, i) => ({ icon, ...t.about.values[i] }));
+  const team = [
+    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',
+  ].map((image, i) => ({
+    image,
+    name: ['Dr. Tomislav Novak', 'Marina Babić', 'Petar Vuković', 'Ivana Matić'][i],
+    ...t.about.team[i],
+  }));
+
   return (
     <div className="pt-20">
       <SEO
-        title="O nama"
-        description="CyberFortis - hrvatska tvrtka za kibernetičku sigurnost. Upoznajte naš stručni tim, vrijednosti i misiju zaštite digitalnih resursa."
+        title={t.about.seo.title}
+        description={t.about.seo.description}
         path="/o-nama"
       />
       {/* Hero Section */}
       <section className="py-20 lg:py-32 bg-cyber-dark bg-grid">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-accent-red font-bold text-[19px] mb-3">O nama</p>
+            <p className="text-accent-red font-bold text-[19px] mb-3">{t.about.eyebrow}</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Predvodnici kibernetičke sigurnosti u Hrvatskoj
+              {t.about.title}
             </h1>
             <p className="text-xl text-text-muted leading-relaxed">
-              CyberFortis je hrvatska tvrtka za kibernetičku sigurnost.
-              Osnovani smo s misijom zaštite digitalnih resursa hrvatskih tvrtki i
-              institucija od sve sofisticiranijih prijetnji.
+              {t.about.intro}
             </p>
           </div>
         </div>
@@ -86,26 +44,20 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-accent-red font-bold text-[19px] mb-3">Naša priča</p>
+              <p className="text-accent-red font-bold text-[19px] mb-3">{t.about.storyEyebrow}</p>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Cyberfortis – Hrvatski tvrtka koja spaja domaće iskustvo iz industrije sa cyber security projektima u regiji
+                {t.about.storyTitle}
               </h2>
               <div className="space-y-4 text-text-muted leading-relaxed">
-                <p>
-                Naš tim je podijeljen na defensive (plavi tim) i offensive (crveni tim) cyber security stručnjake, čime pokrivamo cijeli spektar zaštite - od prevencije i detekcije do simulacije napada.
-                </p>
-                <p>
-               Naši inženjeri radili su na najsloženijim sigurnosnim projektima u regiji, surađujući s vodećim bankama, energetskim kompanijama i institucijama u sektoru zdravstva. Posjedujemo najprestižnije certifikate iz svijeta cyber sigurnosti te bogato iskustvo u radu s vodećim vendorima kao što su IBM, Check Point, Qualys i CrowdStrike.
-                </p>
-                <p>
-                Naša vizija je stvaranje novog, lokalnog tima cyber security specijalista koji će kroz znanje, iskustvo i predanost graditi sigurniju digitalnu budućnost regije.
-                </p>
+                {t.about.storyParagraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
               </div>
             </div>
             <div className="relative">
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop"
-                alt="CyberFortis tim"
+                alt={t.about.teamImageAlt}
                 width={600}
                 height={400}
                 loading="lazy"
@@ -113,7 +65,7 @@ export default function About() {
               />
               <div className="absolute -bottom-6 -left-6 bg-accent-red text-white rounded-2xl p-6 shadow-xl hidden md:block">
                 <div className="text-3xl font-bold mb-1">15+</div>
-                <div className="text-sm opacity-90">Godina iskustva</div>
+                <div className="text-sm opacity-90">{t.about.yearsBadge}</div>
               </div>
             </div>
           </div>
@@ -124,9 +76,9 @@ export default function About() {
       <section className="py-20 lg:py-32 bg-cyber-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-accent-red font-bold text-[19px] mb-3">Naše vrijednosti</p>
+            <p className="text-accent-red font-bold text-[19px] mb-3">{t.about.valuesEyebrow}</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Principi koji vode svaku našu odluku
+              {t.about.valuesTitle}
             </h2>
           </div>
 
@@ -152,9 +104,9 @@ export default function About() {
       <section className="py-20 lg:py-32 bg-cyber-darker hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-accent-red font-bold text-[19px] mb-3">Naš tim</p>
+            <p className="text-accent-red font-bold text-[19px] mb-3">{t.about.teamEyebrow}</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Upoznajte stručnjake koji štite vaše poslovanje
+              {t.about.teamTitle}
             </h2>
           </div>
 

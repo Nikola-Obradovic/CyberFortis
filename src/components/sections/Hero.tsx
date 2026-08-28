@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Shield } from 'lucide-react';
 import Button from '../ui/Button';
 import redCubes from '../../assets/red_cubes.webp';
+import { useI18n } from '../../i18n';
 
 function useCountUp(end: number, duration: number = 2000, startOnView: boolean = true) {
   const [count, setCount] = useState(0);
@@ -58,6 +59,7 @@ function useCountUp(end: number, duration: number = 2000, startOnView: boolean =
 }
 
 export default function Hero() {
+  const { t } = useI18n();
   const stat1 = useCountUp(500, 2000);
   const stat2 = useCountUp(99, 2500);
   const stat3 = useCountUp(15, 1500);
@@ -86,16 +88,15 @@ export default function Hero() {
           {/* Badge */}
           <div className="relative inline-flex items-center gap-2 border border-white/30 rounded-full px-4 py-2 mb-8">
             <Shield className="w-4 h-4 text-white" />
-            <span className="text-sm text-white font-medium">Pouzdana zaštita za vaše poslovanje</span>
+            <span className="text-sm text-white font-medium">{t.hero.badge}</span>
           </div>
 
           <h1 className="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Zaštitite svoje digitalne resurse
+            {t.hero.title}
           </h1>
 
           <p className="relative text-lg sm:text-xl text-white max-w-3xl mx-auto">
-            Proaktivna kibernetička sigurnost i NIS2 usklađenost za vaše poslovanje.
-            Naš tim stručnjaka štiti vaše digitalne resurse i osigurava regulatornu spremnost.
+            {t.hero.subtitle}
           </p>
 
           <div className="h-10" />
@@ -103,10 +104,10 @@ export default function Hero() {
           {/* CTAs */}
           <div className="relative flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button href="/kontakt" size="lg" scrollToForm className="!bg-black !text-white hover:!bg-black/80 !border-0">
-              NIS2 procjena sigurnosti
+              {t.hero.ctaPrimary}
             </Button>
             <Button href="/usluge" variant="outline" size="lg" className="!bg-black !text-white !border-black hover:!bg-black/80">
-              Saznajte više
+              {t.hero.ctaSecondary}
             </Button>
           </div>
         </div>
@@ -120,17 +121,17 @@ export default function Hero() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center gap-x-16 gap-y-8 py-8">
           <div ref={stat1.ref}>
             <div className="text-4xl md:text-5xl font-bold text-white mb-1">{stat1.count}+</div>
-            <div className="text-text-muted">Zaštićenih tvrtki</div>
+            <div className="text-text-muted">{t.hero.statCompanies}</div>
           </div>
           <div className="hidden sm:block w-px bg-border" />
           <div ref={stat2.ref}>
             <div className="text-4xl md:text-5xl font-bold text-white mb-1">{stat2.count}.9%</div>
-            <div className="text-text-muted">Uspješnost detekcije</div>
+            <div className="text-text-muted">{t.hero.statDetection}</div>
           </div>
           <div className="hidden sm:block w-px bg-border" />
           <div ref={stat3.ref}>
             <div className="text-4xl md:text-5xl font-bold text-white mb-1">{stat3.count}+</div>
-            <div className="text-text-muted">Godina iskustva</div>
+            <div className="text-text-muted">{t.hero.statYears}</div>
           </div>
         </div>
       </div>

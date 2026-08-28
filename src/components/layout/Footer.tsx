@@ -1,27 +1,29 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Mail, Phone, MapPin} from 'lucide-react';
 import logo from '../../assets/logo.svg';
-
-const footerLinks = {
-  usluge: [
-    { name: 'Sigurnosne procjene', path: '/usluge#procjene' },
-    { name: 'Penetracijsko testiranje', path: '/usluge#pentest' },
-    { name: 'SOC usluge', path: '/usluge#soc' },
-    { name: 'Odgovor na incidente', path: '/usluge#incident' },
-    { name: 'NIS2 usklađenost', path: '/usluge#uskladjenost' },
-  ],
-  tvrtka: [
-    { name: 'Početna', path: '/' },
-    { name: 'Usluge', path: '/usluge' },
-    { name: 'O nama', path: '/o-nama' },
-    { name: 'Karijere', path: '/karijere' },
-    { name: 'Kontakt', path: '/kontakt' },
-  ],
-};
+import { useI18n } from '../../i18n';
 
 export default function Footer() {
   const navigate = useNavigate();
   const location = useLocation();
+  const { t } = useI18n();
+
+  const footerLinks = {
+    usluge: [
+      { name: t.footer.serviceLinks.procjene, path: '/usluge#procjene' },
+      { name: t.footer.serviceLinks.pentest, path: '/usluge#pentest' },
+      { name: t.footer.serviceLinks.soc, path: '/usluge#soc' },
+      { name: t.footer.serviceLinks.incident, path: '/usluge#incident' },
+      { name: t.footer.serviceLinks.uskladjenost, path: '/usluge#uskladjenost' },
+    ],
+    tvrtka: [
+      { name: t.nav.home, path: '/' },
+      { name: t.nav.services, path: '/usluge' },
+      { name: t.nav.about, path: '/o-nama' },
+      { name: t.nav.careers, path: '/karijere' },
+      { name: t.nav.contact, path: '/kontakt' },
+    ],
+  };
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
     e.preventDefault();
@@ -59,8 +61,7 @@ export default function Footer() {
               <img src={logo} alt="CyberFortis" width={100} height={40} loading="lazy" className="h-10 w-auto mb-4" />
             </a>
             <p className="text-text-muted text-sm leading-relaxed mb-6">
-              Vaš pouzdan partner u zaštiti digitalnih resursa. Pružamo proaktivnu
-              kibernetičku sigurnost za moderne prijetnje.
+              {t.footer.description}
             </p>
             <div className="flex space-x-4">
           
@@ -70,7 +71,7 @@ export default function Footer() {
 
           {/* Usluge Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Usluge</h3>
+            <h3 className="text-white font-semibold mb-4">{t.footer.servicesHeading}</h3>
             <ul className="space-y-3">
               {footerLinks.usluge.map((link) => (
                 <li key={link.path}>
@@ -88,7 +89,7 @@ export default function Footer() {
 
           {/* Tvrtka Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Tvrtka</h3>
+            <h3 className="text-white font-semibold mb-4">{t.footer.companyHeading}</h3>
             <ul className="space-y-3">
               {footerLinks.tvrtka.map((link) => (
                 <li key={link.path}>
@@ -106,7 +107,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Kontakt</h3>
+            <h3 className="text-white font-semibold mb-4">{t.footer.contactHeading}</h3>
             <ul className="space-y-3">
               <li>
                 <a
@@ -129,7 +130,7 @@ export default function Footer() {
               <li>
                 <span className="text-text-muted text-sm flex items-start gap-2">
                   <MapPin size={16} className="flex-shrink-0 mt-0.5" />
-                  Trnjanska cesta 59, 10000 Zagreb, Hrvatska
+                  {t.footer.address}
                 </span>
               </li>
             </ul>
@@ -139,7 +140,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-text-muted text-sm">
-            © {new Date().getFullYear()} CyberFortis. Sva prava pridržana.
+            © {new Date().getFullYear()} CyberFortis. {t.footer.rights}
           </p>
           <div className="flex gap-6">
         

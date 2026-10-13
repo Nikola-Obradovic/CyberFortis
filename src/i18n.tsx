@@ -17,7 +17,9 @@ const I18nContext = createContext<{
 
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [lang, setLang] = useState<Lang>(
-    () => (localStorage.getItem('lang') as Lang | null) ?? 'hr'
+    () =>
+      (localStorage.getItem('lang') as Lang | null) ??
+      (location.hostname.endsWith('.eu') ? 'en' : 'hr')
   );
 
   useEffect(() => {

@@ -6,7 +6,7 @@ interface SEOProps {
   path: string;
 }
 
-const BASE_URL = 'https://cyberfortis.hr';
+const BASE_URL = location.hostname.endsWith('.eu') ? 'https://cyberfortis.eu' : 'https://cyberfortis.hr';
 const SITE_NAME = 'CyberFortis';
 
 function setMeta(property: string, content: string) {

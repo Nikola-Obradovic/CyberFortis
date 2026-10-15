@@ -11,7 +11,7 @@ export default function Contact() {
       <SEO
         title={t.contact.seo.title}
         description={t.contact.seo.description}
-        path="/kontakt"
+        path="/contact"
       />
       {/* Hero Section */}
       <section className="py-20 lg:py-32 bg-cyber-dark bg-grid">

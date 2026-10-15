@@ -60,7 +60,7 @@ export default function ServicesPage() {
       <SEO
         title={t.services.seo.title}
         description={t.services.seo.description}
-        path="/usluge"
+        path="/services"
       />
       {/* Hero Section */}
       <section className="py-20 lg:py-32 bg-cyber-dark bg-grid">
@@ -117,7 +117,7 @@ export default function ServicesPage() {
                         </li>
                       ))}
                     </ul>
-                    <Button href="/kontakt" scrollToForm>{t.services.requestQuote}</Button>
+                    <Button href="/contact" scrollToForm>{t.services.requestQuote}</Button>
                   </div>
                   <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
                     <img

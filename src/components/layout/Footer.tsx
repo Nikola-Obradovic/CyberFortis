@@ -10,18 +10,18 @@ export default function Footer() {
 
   const footerLinks = {
     usluge: [
-      { name: t.footer.serviceLinks.procjene, path: '/usluge#procjene' },
-      { name: t.footer.serviceLinks.pentest, path: '/usluge#pentest' },
-      { name: t.footer.serviceLinks.soc, path: '/usluge#soc' },
-      { name: t.footer.serviceLinks.incident, path: '/usluge#incident' },
-      { name: t.footer.serviceLinks.uskladjenost, path: '/usluge#uskladjenost' },
+      { name: t.footer.serviceLinks.procjene, path: '/services#procjene' },
+      { name: t.footer.serviceLinks.pentest, path: '/services#pentest' },
+      { name: t.footer.serviceLinks.soc, path: '/services#soc' },
+      { name: t.footer.serviceLinks.incident, path: '/services#incident' },
+      { name: t.footer.serviceLinks.uskladjenost, path: '/services#uskladjenost' },
     ],
     tvrtka: [
       { name: t.nav.home, path: '/' },
-      { name: t.nav.services, path: '/usluge' },
-      { name: t.nav.about, path: '/o-nama' },
-      { name: t.nav.careers, path: '/karijere' },
-      { name: t.nav.contact, path: '/kontakt' },
+      { name: t.nav.services, path: '/services' },
+      { name: t.nav.about, path: '/about' },
+      { name: t.nav.careers, path: '/careers' },
+      { name: t.nav.contact, path: '/contact' },
     ],
   };
 

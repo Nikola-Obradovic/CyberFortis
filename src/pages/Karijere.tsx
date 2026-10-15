@@ -141,7 +141,7 @@ export default function Karijere() {
       <SEO
         title={t.careers.seo.title}
         description={t.careers.seo.description}
-        path="/karijere"
+        path="/careers"
       />
       {/* Hero */}
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
@@ -194,7 +194,7 @@ export default function Karijere() {
           <p className="text-text-muted text-lg mb-8 max-w-2xl mx-auto">
             {t.careers.bottomText}
           </p>
-          <Button href="/kontakt" size="lg" scrollToForm>
+          <Button href="/contact" size="lg" scrollToForm>
             {t.careers.bottomCta}
           </Button>
         </div>

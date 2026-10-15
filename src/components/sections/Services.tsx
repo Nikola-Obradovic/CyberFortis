@@ -57,7 +57,7 @@ export default function Services() {
             return (
             <Link
               key={service.id}
-              to={`/usluge#${service.id}`}
+              to={`/services#${service.id}`}
               className="group py-8 border-b border-border first:border-t hover:bg-white/[0.02] transition-colors cursor-pointer block"
             >
               <div className="flex flex-col md:flex-row md:items-center gap-6">
@@ -92,7 +92,7 @@ export default function Services() {
         </div>
 
         <div className="mt-12">
-          <Button href="/usluge" variant="outline">
+          <Button href="/services" variant="outline">
             {t.services.viewAll}
             <ArrowRight className="ml-2 w-4 h-4" />
           </Button>

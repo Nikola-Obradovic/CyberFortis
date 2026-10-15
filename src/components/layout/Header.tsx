@@ -9,11 +9,11 @@ export default function Header() {
   const { t } = useI18n();
   const navLinks = [
     { name: t.nav.home, path: '/' },
-    { name: t.nav.services, path: '/usluge' },
-    { name: t.nav.solutions, path: '/nasa-rjesenja' },
-    { name: t.nav.about, path: '/o-nama' },
-    { name: t.nav.careers, path: '/karijere' },
-    { name: t.nav.contact, path: '/kontakt' },
+    { name: t.nav.services, path: '/services' },
+    { name: t.nav.solutions, path: '/solutions' },
+    { name: t.nav.about, path: '/about' },
+    { name: t.nav.careers, path: '/careers' },
+    { name: t.nav.contact, path: '/contact' },
   ];
 
   const [isScrolled, setIsScrolled] = useState(false);
@@ -63,11 +63,11 @@ export default function Header() {
 
   const handleCtaClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    if (location.pathname === '/kontakt') {
+    if (location.pathname === '/contact') {
       const form = document.getElementById('contact-form');
       form?.scrollIntoView({ behavior: 'smooth' });
     } else {
-      navigate('/kontakt');
+      navigate('/contact');
       setTimeout(() => {
         const form = document.getElementById('contact-form');
         form?.scrollIntoView({ behavior: 'smooth' });
@@ -109,7 +109,7 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="/kontakt"
+              href="/contact"
               onClick={handleCtaClick}
               className="bg-accent-red hover:bg-accent-red-hover text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:shadow-accent-red/20"
             >
@@ -165,7 +165,7 @@ export default function Header() {
           </a>
         ))}
         <a
-          href="/kontakt"
+          href="/contact"
           onClick={(e) => {
             handleCtaClick(e);
             setIsMobileMenuOpen(false);

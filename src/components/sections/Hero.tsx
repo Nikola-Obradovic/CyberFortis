@@ -103,10 +103,10 @@ export default function Hero() {
 
           {/* CTAs */}
           <div className="relative flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button href="/kontakt" size="lg" scrollToForm className="!bg-black !text-white hover:!bg-black/80 !border-0">
+            <Button href="/contact" size="lg" scrollToForm className="!bg-black !text-white hover:!bg-black/80 !border-0">
               {t.hero.ctaPrimary}
             </Button>
-            <Button href="/usluge" variant="outline" size="lg" className="!bg-black !text-white !border-black hover:!bg-black/80">
+            <Button href="/services" variant="outline" size="lg" className="!bg-black !text-white !border-black hover:!bg-black/80">
               {t.hero.ctaSecondary}
             </Button>
           </div>

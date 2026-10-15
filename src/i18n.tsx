@@ -2,8 +2,10 @@ import { createContext, useContext, useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 import { hr } from './locales/hr';
 import { en } from './locales/en';
+import { cnr } from './locales/cnr';
+import { siteFor } from './sites';
 
-const dictionaries = { hr, en };
+const dictionaries = { hr, en, cnr };
 
 export type Lang = keyof typeof dictionaries;
 export type ServiceId = keyof typeof hr.services.items;
@@ -19,7 +21,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   const [lang, setLang] = useState<Lang>(
     () =>
       (localStorage.getItem('lang') as Lang | null) ??
-      (location.hostname.endsWith('.eu') ? 'en' : 'hr')
+      siteFor(location.hostname).lang
   );
 
   useEffect(() => {

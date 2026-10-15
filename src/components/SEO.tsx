@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { siteFor } from '../sites';
 
 interface SEOProps {
   title: string;
@@ -6,7 +7,7 @@ interface SEOProps {
   path: string;
 }
 
-const BASE_URL = location.hostname.endsWith('.eu') ? 'https://cyberfortis.eu' : 'https://cyberfortis.hr';
+const BASE_URL = siteFor(location.hostname).origin;
 const SITE_NAME = 'CyberFortis';
 
 function setMeta(property: string, content: string) {

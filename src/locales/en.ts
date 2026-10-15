@@ -15,9 +15,9 @@ export const en: typeof hr = {
 
   home: {
     seo: {
-      title: 'CyberFortis | Cyber security in Croatia',
+      title: 'CyberFortis | Cyber security in Europe',
       description:
-        'CyberFortis - your trusted partner in protecting digital assets. NIS2 compliance, penetration testing, SOC services and security assessments for companies in Croatia.',
+        'CyberFortis - your trusted partner in protecting digital assets. NIS2 compliance, penetration testing, SOC services and security assessments for companies across Europe.',
     },
   },
 
@@ -300,19 +300,19 @@ export const en: typeof hr = {
     seo: {
       title: 'About us',
       description:
-        'CyberFortis - a Croatian cyber security company. Meet our expert team, our values and our mission to protect digital assets.',
+        'CyberFortis - a European cyber security company. Meet our expert team, our values and our mission to protect digital assets.',
     },
     eyebrow: 'About us',
-    title: 'Leaders in cyber security in Croatia',
+    title: 'Leaders in cyber security in Europe',
     intro:
-      'CyberFortis is a Croatian cyber security company. We were founded with a mission to protect the digital assets of Croatian companies and institutions from increasingly sophisticated threats.',
+      'CyberFortis is a European cyber security company. We were founded with a mission to protect the digital assets of European companies and institutions from increasingly sophisticated threats.',
     storyEyebrow: 'Our story',
     storyTitle:
-      'Cyberfortis – a Croatian company combining local industry experience with cyber security projects across the region',
+      'Cyberfortis – a European company combining local industry experience with cyber security projects across Europe',
     storyParagraphs: [
       'Our team is split into defensive (blue team) and offensive (red team) cyber security experts, covering the full spectrum of protection - from prevention and detection to attack simulation.',
-      'Our engineers have worked on the most complex security projects in the region, collaborating with leading banks, energy companies and healthcare institutions. We hold the most prestigious certifications in cyber security and have extensive experience working with leading vendors such as IBM, Check Point, Qualys and CrowdStrike.',
-      'Our vision is to build a new, local team of cyber security specialists who will shape a safer digital future for the region through knowledge, experience and dedication.',
+      'Our engineers have worked on the most complex security projects across Europe, collaborating with leading banks, energy companies and healthcare institutions. We hold the most prestigious certifications in cyber security and have extensive experience working with leading vendors such as IBM, Check Point, Qualys and CrowdStrike.',
+      'Our vision is to build a new European team of cyber security specialists who will shape a safer digital future for Europe through knowledge, experience and dedication.',
     ],
     teamImageAlt: 'CyberFortis team',
     yearsBadge: 'Years of experience',
@@ -423,7 +423,7 @@ export const en: typeof hr = {
     seo: {
       title: 'Careers',
       description:
-        'Join the CyberFortis team - open positions for cyber security engineers. Build your career in cyber security in Croatia.',
+        'Join the CyberFortis team - open positions for cyber security engineers. Build your career in cyber security in Europe.',
     },
     badge: 'Careers',
     title: 'Join our team',

@@ -28,11 +28,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="o-nama" element={<About />} />
-            <Route path="usluge" element={<ServicesPage />} />
-            <Route path="kontakt" element={<Contact />} />
-            <Route path="karijere" element={<Karijere />} />
-            <Route path="nasa-rjesenja" element={<NasaRjesenja />} />
+            <Route path="about" element={<About />} />
+            <Route path="services" element={<ServicesPage />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="careers" element={<Karijere />} />
+            <Route path="solutions" element={<NasaRjesenja />} />
           </Route>
         </Routes>
       </Suspense>

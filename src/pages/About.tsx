@@ -22,7 +22,7 @@ export default function About() {
       <SEO
         title={t.about.seo.title}
         description={t.about.seo.description}
-        path="/o-nama"
+        path="/about"
       />
       {/* Hero Section */}
       <section className="py-20 lg:py-32 bg-cyber-dark bg-grid">

@@ -54,12 +54,12 @@ export default function Button({
     if (href) {
       e.preventDefault();
 
-      if (scrollToForm && href === '/kontakt') {
-        if (location.pathname === '/kontakt') {
+      if (scrollToForm && href === '/contact') {
+        if (location.pathname === '/contact') {
           const form = document.getElementById('contact-form');
           form?.scrollIntoView({ behavior: 'smooth' });
         } else {
-          navigate('/kontakt');
+          navigate('/contact');
           setTimeout(() => {
             const form = document.getElementById('contact-form');
             form?.scrollIntoView({ behavior: 'smooth' });

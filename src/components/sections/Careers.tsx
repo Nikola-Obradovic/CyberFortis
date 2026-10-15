@@ -49,7 +49,7 @@ export default function Careers() {
             {positions.map((position, index) => (
               <Link
                 key={index}
-                to={`/karijere#${position.hash}`}
+                to={`/careers#${position.hash}`}
                 className="group block bg-cyber-card border border-border rounded-xl p-6 hover:border-accent-red/30 transition-all"
               >
                 <div className="flex items-center justify-between">
@@ -65,7 +65,7 @@ export default function Careers() {
             ))}
 
             <Link
-              to="/karijere"
+              to="/careers"
               className="inline-flex items-center gap-2 text-accent-red hover:text-white transition-colors mt-4 font-bold text-[19px]"
             >
               {t.careersSection.viewAll}

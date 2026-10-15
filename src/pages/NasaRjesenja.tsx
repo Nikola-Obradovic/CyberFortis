@@ -18,7 +18,7 @@ export default function NasaRjesenja() {
       <SEO
         title={t.solutions.seo.title}
         description={t.solutions.seo.description}
-        path="/nasa-rjesenja"
+        path="/solutions"
       />
       {/* Hero Section */}
       <section className="py-20 lg:py-32 bg-cyber-dark bg-grid">

@@ -2,6 +2,9 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { Mail, Phone, MapPin} from 'lucide-react';
 import logo from '../../assets/logo.svg';
 import { useI18n } from '../../i18n';
+import { siteFor } from '../../sites';
+
+const site = siteFor(window.location.hostname);
 
 export default function Footer() {
   const navigate = useNavigate();
@@ -120,17 +123,17 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+385993022490"
+                  href={`tel:${site.phone.replaceAll(' ', '')}`}
                   className="text-text-muted hover:text-white text-sm transition-colors flex items-center gap-2"
                 >
                   <Phone size={16} />
-                  +385 99 3022 490
+                  {site.phone}
                 </a>
               </li>
               <li>
                 <span className="text-text-muted text-sm flex items-start gap-2">
                   <MapPin size={16} className="flex-shrink-0 mt-0.5" />
-                  {t.footer.address}
+                  {site.address?.join(', ') ?? t.footer.address}
                 </span>
               </li>
             </ul>

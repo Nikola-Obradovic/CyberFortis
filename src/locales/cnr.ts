@@ -293,7 +293,7 @@ export const cnr: typeof hr = {
       incident: 'Odgovor na incidente',
       uskladjenost: 'NIS2 usklađenost',
     },
-    address: 'Trnjanska cesta 59, 10000 Zagreb, Hrvatska',
+    address: 'Vojvode Maša Đurovića br. 33/6, Podgorica',
     rights: 'Sva prava zadržana.',
   },
 
@@ -367,7 +367,7 @@ export const cnr: typeof hr = {
     seo: {
       title: 'Kontakt',
       description:
-        'Kontaktirajte CyberFortis - vaš partner za sajber bezbjednost. Adresa: Trnjanska cesta 59, Zagreb. Email: info@cyberfortis.hr.',
+        'Kontaktirajte CyberFortis - vaš partner za sajber bezbjednost. Adresa: Vojvode Maša Đurovića br. 33/6, Podgorica. Email: info@cyberfortis.hr.',
     },
     eyebrow: 'Kontakt',
     title: 'Kontaktirajte nas',
@@ -377,8 +377,8 @@ export const cnr: typeof hr = {
     email: 'Email',
     phone: 'Telefon',
     address: 'Adresa',
-    addressLine1: 'Trnjanska cesta 59',
-    addressLine2: '10000 Zagreb, Hrvatska',
+    addressLine1: 'Vojvode Maša Đurovića br. 33/6',
+    addressLine2: 'Podgorica',
     hours: 'Radno vrijeme',
     hoursValue: 'Pon - Pet: 08:00 - 17:00',
     socHours: 'SOC: Non-stop',

@@ -1,6 +1,9 @@
 import { ArrowRight } from 'lucide-react';
 import Button from '../ui/Button';
 import { useI18n } from '../../i18n';
+import { siteFor } from '../../sites';
+
+const site = siteFor(location.hostname);
 
 export default function CTA() {
   const { t } = useI18n();
@@ -27,10 +30,10 @@ export default function CTA() {
           <span className="text-text-muted">
             {t.cta.orCall}{' '}
             <a
-              href="tel:+385993022490"
+              href={`tel:${site.phone.replaceAll(' ', '')}`}
               className="text-white hover:text-accent-red transition-colors"
             >
-              +385 99 3022 490
+              {site.phone}
             </a>
           </span>
         </div>

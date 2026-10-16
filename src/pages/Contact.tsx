@@ -2,6 +2,9 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import SEO from '../components/SEO';
 import contactIllustration from '../assets/contact-illustration.svg';
 import { useI18n } from '../i18n';
+import { siteFor } from '../sites';
+
+const site = siteFor(location.hostname);
 
 export default function Contact() {
   const { t } = useI18n();
@@ -60,10 +63,10 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-white mb-1">{t.contact.phone}</h3>
                       <a
-                        href="tel:+385993022490"
+                        href={`tel:${site.phone.replaceAll(' ', '')}`}
                         className="text-text-muted hover:text-white transition-colors"
                       >
-                        +385 99 3022 490
+                        {site.phone}
                       </a>
                     </div>
                   </div>
@@ -75,9 +78,9 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-white mb-1">{t.contact.address}</h3>
                       <p className="text-text-muted">
-                        {t.contact.addressLine1}
+                        {site.address?.[0] ?? t.contact.addressLine1}
                         <br />
-                        {t.contact.addressLine2}
+                        {site.address?.[1] ?? t.contact.addressLine2}
                       </p>
                     </div>
                   </div>
@@ -117,7 +120,7 @@ export default function Contact() {
       {/* Map Section */}
       <section className="h-96 bg-cyber-card">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.0!2d15.9816!3d45.7950!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d70b94b6848d%3A0x1!2sTrnjanska%20cesta%2059%2C%2010000%20Zagreb!5e0!3m2!1sen!2shr!4v1700000000000!5m2!1sen!2shr"
+          src={site.map}
           width="100%"
           height="100%"
           style={{ border: 0, filter: 'grayscale(100%) invert(92%) contrast(83%)' }}
